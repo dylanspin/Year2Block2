@@ -15,7 +15,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Movement moveScript;
     [SerializeField] private Look lookScript;
 
-    void Start()
+    private void Start()
+    {
+        // setStart();
+    }
+
+    /// <summary>
+    /// Turns on or off components/objects based up on if its playing in the editor or on the quest
+    /// </summary>    
+    private void setStart()
     {
         bool isEditor = Application.isEditor;
 
