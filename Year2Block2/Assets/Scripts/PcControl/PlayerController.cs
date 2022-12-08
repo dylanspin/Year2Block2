@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Hands")]
-    [SerializeField] private GameObject leftHand;
-    [SerializeField] private GameObject rightHand;
 
     [Header("Testing Objects")]
     [SerializeField] private GameObject[] testingObject;
@@ -17,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        // setStart();
+        setStart();
     }
 
     /// <summary>
@@ -26,9 +23,6 @@ public class PlayerController : MonoBehaviour
     private void setStart()
     {
         bool isEditor = Application.isEditor;
-
-        rightHand.SetActive(!isEditor);
-        leftHand.SetActive(!isEditor);
 
         if(testingObject.Length > 0)
         {

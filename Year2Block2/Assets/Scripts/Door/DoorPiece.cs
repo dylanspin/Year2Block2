@@ -1,3 +1,7 @@
+/*
+    @author Dylan spin,
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +31,7 @@ public class DoorPiece : MonoBehaviour
     [SerializeField] private string colliderLayer = "NonColliding";
 
     [Header("Private values")]
-    private bool broken = false;
+    private bool broken = false;//if current piece is broken off
 
     /// <summary>
     /// Start function checks if the object it self is in its own list if so removes it this is used to prevent bugs
@@ -59,7 +63,6 @@ public class DoorPiece : MonoBehaviour
         }
     }
 
-
     /// <summary>
     /// Breaks of piece
     /// </summary>
@@ -70,7 +73,6 @@ public class DoorPiece : MonoBehaviour
         gameObject.AddComponent<Rigidbody>();
         Destroy(gameObject,2);
     }
-
 
     /// <summary>
     /// Checks if its a hinge broken and checks if lose pieces should fall off or not
@@ -165,7 +167,6 @@ public class DoorPiece : MonoBehaviour
             }
             if(connectedParts.Count <= 1)
             {
-                Debug.Log("Break off");
                 breakPiece();
             }
         }
@@ -174,5 +175,4 @@ public class DoorPiece : MonoBehaviour
     //go trough all connected make new list and add the current script to it each time its called 
     //then in the function check if its side position is attached to it
     //dont call the function again on one of the objects already in the list
-
 }

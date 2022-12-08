@@ -1,3 +1,7 @@
+/*
+    @author Dylan spin,
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +9,24 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [Header("Testing materials")]
+
     [SerializeField] private Material[] checkmaterials;
     [SerializeField] private Material defaultMat;
 
     [Header("Settings")]
+
     [SerializeField] private float fallingForce = 100;
 
     [Tooltip("The new layer of the broken of piece after being hit")]
     [SerializeField] private string colliderLayer = "NonColliding";
 
     [Header("Components")]
+
     [SerializeField] private DoorPiece[] hingePoints;
     [SerializeField] private DoorPiece[] allPoints;
 
     [Header("Private data")]
+    
     private int hingeCount;
     private Rigidbody rb;
   
