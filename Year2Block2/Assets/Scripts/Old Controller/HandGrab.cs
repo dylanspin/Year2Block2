@@ -82,7 +82,7 @@ public class HandGrab : MonoBehaviour
 
     private void testingInputs()
     {
-        letgoForce();
+        // letgoForce();
 
         if(Input.GetMouseButtonDown(mouseInput))
         {
@@ -117,7 +117,7 @@ public class HandGrab : MonoBehaviour
         {
             if(grabbedObject)
             {
-                grabbedObject.GetComponent<GrabbableCustom>().grabThis(false,null);
+                grabbedObject.GetComponent<GrabbableCustom>().grabThis(false,grabPoint);
                 grabbedObject = null;
             }
         }
@@ -142,9 +142,9 @@ public class HandGrab : MonoBehaviour
         foreach (Transform pos in inTriggerObjects)
         {
             float dist = Vector3.Distance(pos.position, currentPos);
-            GrabbableCustom grabScript = pos.GetComponent<GrabbableCustom>();
+            // GrabbableCustom grabScript = pos.GetComponent<GrabbableCustom>();
 
-            if(dist < minDist && !grabScript.getGrabbed())//if distance is closer and isnt grabbed already
+            if(dist < minDist)
             {
                 closedPos = pos;
                 minDist = dist;

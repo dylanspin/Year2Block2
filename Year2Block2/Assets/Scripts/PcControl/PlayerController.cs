@@ -32,7 +32,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        moveScript.enabled = isEditor;
-        lookScript.enabled = isEditor;
+        if(moveScript)
+        {
+            moveScript.enabled = isEditor;
+        }
+        
+        if(lookScript)
+        {
+            lookScript.enabled = isEditor;
+        }
     }
 }

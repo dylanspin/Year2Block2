@@ -7,10 +7,10 @@ public class Movement : MonoBehaviour
     [Header("Settings")]
 
     [SerializeField] [Tooltip ("The walking speed of the player")]
-    private float WalkSpeed = 1.0f;
+    private float WalkSpeed = 2.0f;
 
     [SerializeField] [Tooltip ("The running speed of the player")]
-    private float RunSpeed = 2.0f;
+    private float RunSpeed = 4.0f;
 
     [SerializeField] [Tooltip ("The speed of the player rotation")]
     private float RotationSmoothTime = 0.2f;
