@@ -15,6 +15,9 @@ public class Door : MonoBehaviour
 
     [Header("Settings")]
 
+    [Tooltip("The min velocity needed to break the door")]
+    [SerializeField] private float breakingVel = 1.5f;
+
     [SerializeField] private float fallingForce = 100;
 
     [Tooltip("The new layer of the broken of piece after being hit")]
@@ -33,6 +36,11 @@ public class Door : MonoBehaviour
     private void Start()
     {
         hingeCount = hingePoints.Length;
+
+        for(int i=0; i<allPoints.Length; i++)
+        {
+            allPoints[i].StartCheck(breakingVel);
+        }
     }
 
     public void removeHinge(Transform player)

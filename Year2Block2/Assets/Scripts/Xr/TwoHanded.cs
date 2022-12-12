@@ -42,15 +42,15 @@ public class TwoHanded : XRGrabInteractable
         Quaternion targetRotation;
         if(twoHandRotationType == TwoHandRotationType.none)
         {
-            targetRotation = Quaternion.LookRotation(selectingInteractor.attachTransform.position - secondInteractor.attachTransform.position);
+            targetRotation = Quaternion.LookRotation(secondInteractor.attachTransform.position - selectingInteractor.attachTransform.position);
         }
         else if(twoHandRotationType == TwoHandRotationType.First)
         {
-            targetRotation = Quaternion.LookRotation(selectingInteractor.attachTransform.position - secondInteractor.attachTransform.position, selectingInteractor.transform.up);//, selectingInteractor.transform.up
+            targetRotation = Quaternion.LookRotation(secondInteractor.attachTransform.position - selectingInteractor.attachTransform.position, selectingInteractor.transform.up);//, selectingInteractor.transform.up
         }
         else
         {
-            targetRotation = Quaternion.LookRotation(selectingInteractor.attachTransform.position - secondInteractor.attachTransform.position, secondInteractor.attachTransform.up);//, secondInteractor.attachTransform.up
+            targetRotation = Quaternion.LookRotation(secondInteractor.attachTransform.position - selectingInteractor.attachTransform.position, secondInteractor.attachTransform.up);//, secondInteractor.attachTransform.up
         }
 
         return targetRotation;
@@ -71,13 +71,13 @@ public class TwoHanded : XRGrabInteractable
     protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
         base.OnSelectEntered(interactor);
-        // startRotation = interactor.transform.localRotation;
+        startRotation = interactor.transform.localRotation;
     }
 
     protected override void OnSelectExited(XRBaseInteractor interactor)
     {
         base.OnSelectExited(interactor);
-        // interactor.transform.localRotation = startRotation;
+        interactor.transform.localRotation = startRotation;
     }
 
     public override bool IsSelectableBy(XRBaseInteractor interactor)

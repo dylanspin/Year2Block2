@@ -9,9 +9,6 @@ using UnityEngine;
 public class DoorPiece : MonoBehaviour
 {
     [Header("Settings")]
-   
-    [Tooltip("The min velocity needed to break the door")]
-    [SerializeField] private float breakingVel = 1.5f;
 
     [Tooltip("if hinge breaking point of the door")]
     [SerializeField] private bool hingePoint = false;
@@ -32,15 +29,17 @@ public class DoorPiece : MonoBehaviour
 
     [Header("Private values")]
     private bool broken = false;//if current piece is broken off
+    private float breakingVel = 1.5f;
 
     /// <summary>
     /// Start function checks if the object it self is in its own list if so removes it this is used to prevent bugs
     /// </summary>
-    private void Start()
+    public void StartCheck(float breakForce)
     {
+        breakingVel = breakForce;
         for(int i=0; i<connectedParts.Count; i++)
         {
-            if(connectedParts[i] == this)
+            if(connectedParts[i] == this || connectedParts[i] == null)
             {
                 connectedParts.RemoveAt(i);
             }
