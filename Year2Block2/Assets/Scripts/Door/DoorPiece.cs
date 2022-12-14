@@ -15,6 +15,9 @@ public class DoorPiece : MonoBehaviour
 
     [Tooltip("if its the side of the door on the hinge side")]
     [SerializeField] private bool isSide = false;
+
+    [Tooltip("if its the lock of the door")]
+    [SerializeField] private bool isLock = false;
     
     [Header("Components")]
 
@@ -36,7 +39,8 @@ public class DoorPiece : MonoBehaviour
     /// </summary>
     public void StartCheck(float breakForce)
     {
-        breakingVel = breakForce;
+        breakingVel = isLock? 2 : 1 * breakForce;//if is lock double the required force
+
         for(int i=0; i<connectedParts.Count; i++)
         {
             if(connectedParts[i] == this || connectedParts[i] == null)
@@ -49,7 +53,7 @@ public class DoorPiece : MonoBehaviour
     /// <summary>
     /// Called from axe collision when this piece is hit 
     /// </summary>
-    public void hitPiece(float velocity,Transform player)
+    public void hitPiece(float velocity,Transform player,AxeCollider axeScript)
     {
         if(!broken)
         {
@@ -58,12 +62,13 @@ public class DoorPiece : MonoBehaviour
                 breakPiece();
 
                 checkConnection(player);
+                axeScript.ActivateHaptic();
             }
         }
     }
 
     /// <summary>
-    /// Breaks of piece
+    /// Breaks of piece of the door
     /// </summary>
     private void breakPiece()
     {
@@ -81,6 +86,11 @@ public class DoorPiece : MonoBehaviour
         if(hingePoint)
         {
             doorScript.removeHinge(player);
+        }
+
+        if(isLock)
+        {
+            doorScript.removeLock(player);
         }
 
         startCheckHasConnection();
@@ -113,7 +123,6 @@ public class DoorPiece : MonoBehaviour
     {
         if(count < 10)
         {
-            Material newSetMat = doorScript.getMaterial(count);
             checkList.Add(this);
             for(int i=0; i<connectedParts.Count; i++)
             {
@@ -121,7 +130,6 @@ public class DoorPiece : MonoBehaviour
                 {
                     if(!checkList.Contains(connectedParts[i]))
                     {
-                        connectedParts[i].GetComponent<MeshRenderer>().material = newSetMat;
                         connectedParts[i].checkConnection(checkList,count+1,firsPiece);
                     }
                     else

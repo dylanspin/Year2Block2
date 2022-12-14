@@ -43,11 +43,17 @@ public class RBMovement : MonoBehaviour
     private float currentSpeed;//current movement speed for if i want to make something that changes the speed
     private Vector3 movementPlayer;//movement velocity
 
+    /// <summary>
+    /// Sets the start settings
+    /// </summary>
     public void Start()
     {
         currentSpeed = walkingSpeed;
     }
 
+    /// <summary>
+    /// gets the input from the controller
+    /// </summary>
     void Update()
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
@@ -59,7 +65,10 @@ public class RBMovement : MonoBehaviour
             inputAxis.y = Input.GetAxis("Vertical");
         }
     }
-
+    
+    /// <summary>
+    /// set the velocity of the rigid body with the input from the set controller
+    /// </summary>
     void FixedUpdate()
     {
         followHeadset();
@@ -71,8 +80,10 @@ public class RBMovement : MonoBehaviour
 
         rbPlayer.velocity = new Vector3(movementPlayer.x ,rbPlayer.velocity.y, movementPlayer.z);
     }
-
-
+    
+    /// <summary>
+    /// The collider follows the player
+    /// </summary>
     private void followHeadset()
     {
         playerCol.height = playerHead.CameraInOriginSpaceHeight + extraHeight;

@@ -8,10 +8,19 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [Header("Testing materials")]
+    [Header("Hinge Settings")]
+    
+    [Tooltip("Rigidbody for the hinge connection point")]
+    [SerializeField] private Rigidbody connectionPoint;
 
-    [SerializeField] private Material[] checkmaterials;
-    [SerializeField] private Material defaultMat;
+    [Tooltip("Hinge rotation position offset")]
+    [SerializeField] private Vector3 anchorOffset = new Vector3(0,1,2);
+
+    [Tooltip("Hinge rotation axis directiong")]
+    [SerializeField] private Vector3 rotationAxis = new Vector3(0,90,0);
+
+    [Tooltip("Hinge rotation Limits")]
+    [SerializeField] private Vector2 rotationLimits = new Vector2(-90,90);
 
     [Header("Settings")]
 
@@ -32,7 +41,11 @@ public class Door : MonoBehaviour
     
     private int hingeCount;
     private Rigidbody rb;
-  
+    private HingeJoint hinge;
+
+    /// <summary>
+    /// On start sets the settings for the door pieces and runs a check to prevent bugs 
+    /// </summary>
     private void Start()
     {
         hingeCount = hingePoints.Length;
@@ -43,6 +56,44 @@ public class Door : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Runs checks when the lock part of the door is broken 
+    /// </summary>
+    public void removeLock(Transform player)
+    {
+        if(!rb)//if hinges arentBroken
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+            setHinge();//adds the hinge and its settings
+
+            // hinge.
+            rb.AddForce(player.transform.forward * Random.Range(fallingForce/2,fallingForce), ForceMode.Impulse);
+        }
+    }
+
+    /// <summary>
+    /// Adds physics hinge and its settings to the door
+    /// </summary>
+    private void setHinge()
+    {
+        hinge = gameObject.AddComponent<HingeJoint>();
+
+        hinge.connectedBody = connectionPoint;
+        hinge.anchor = anchorOffset;
+        hinge.axis = rotationAxis;
+
+        JointLimits limits = hinge.limits;
+        limits.min = rotationLimits.x;
+        limits.bounciness = 0;
+        limits.bounceMinVelocity = 0;
+        limits.max = rotationLimits.y;
+        hinge.limits = limits;
+        hinge.useLimits = true;
+    }
+
+    /// <summary>
+    /// Removes a hinge and checks if there are any left other wise the door is lose and falls over
+    /// </summary>
     public void removeHinge(Transform player)
     {
         if(hingeCount > 1)
@@ -57,30 +108,26 @@ public class Door : MonoBehaviour
                 child.gameObject.layer = LayerMask.NameToLayer(colliderLayer);
             }
 
-            rb = gameObject.AddComponent<Rigidbody>();
+            if(!hinge)
+            {
+                rb = gameObject.AddComponent<Rigidbody>();
+            }
+            else
+            {
+                Destroy(hinge);
+            }
             rb.AddForce(player.transform.forward * Random.Range(fallingForce/2,fallingForce), ForceMode.Impulse);
         }
     }
 
-    /////////////testing
-
-    public Material getMaterial(int count)
-    {
-        if(count >= checkmaterials.Length)
-        {
-            return checkmaterials[checkmaterials.Length-1];
-        }  
-        else
-        {
-            return checkmaterials[count];
-        }
-    }
-
+    /// <summary>
+    /// Checks all pieces still in the list if they still have another connection
+    /// </summary>
     public void checkAll()
     {
         for(int i=0; i<allPoints.Length; i++)
         {
-            if(allPoints[i])
+            if(allPoints[i])//if the piece still excist
             {
                 allPoints[i].checkEmpty();
             }
