@@ -85,7 +85,7 @@ public class DoorPiece : MonoBehaviour
     {
         if(hingePoint)
         {
-            doorScript.removeHinge(player);
+            doorScript.removeHinge(player,gameObject);
         }
 
         if(isLock)

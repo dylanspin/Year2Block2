@@ -294,8 +294,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
-  m_ThrowAngularVelocityScale: 1
+  m_ThrowVelocityScale: 2
+  m_ThrowAngularVelocityScale: 2
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -632,17 +632,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0035941e0077aed4caf83044cf378900, type: 2}
+      objectReference: {fileID: 2100000, guid: 663606227d298fa4e863c3df01ac5461, type: 2}
     - target: {fileID: -7511558181221131132, guid: 6cc14e30dbcd9a145a9b60fe2f1fa6bf,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: ed476ace7c43c114aaf5d93e9de4f8c4, type: 2}
+      objectReference: {fileID: 2100000, guid: 663606227d298fa4e863c3df01ac5461, type: 2}
     - target: {fileID: -7511558181221131132, guid: 6cc14e30dbcd9a145a9b60fe2f1fa6bf,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: dfdd3b72c09899241b674b90b4167abb, type: 2}
+      objectReference: {fileID: 2100000, guid: cd3b2363793f81041a9e7945d49b9fc0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6cc14e30dbcd9a145a9b60fe2f1fa6bf,
         type: 3}
       propertyPath: m_Name

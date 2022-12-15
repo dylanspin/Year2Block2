@@ -34,12 +34,11 @@ public class Door : MonoBehaviour
 
     [Header("Components")]
 
-    [SerializeField] private DoorPiece[] hingePoints;
+    [SerializeField] private List<GameObject> hingePoints;
     [SerializeField] private DoorPiece[] allPoints;
 
     [Header("Private data")]
     
-    private int hingeCount;
     private Rigidbody rb;
     private HingeJoint hinge;
 
@@ -48,7 +47,6 @@ public class Door : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        hingeCount = hingePoints.Length;
 
         for(int i=0; i<allPoints.Length; i++)
         {
@@ -67,7 +65,7 @@ public class Door : MonoBehaviour
             setHinge();//adds the hinge and its settings
 
             // hinge.
-            rb.AddForce(player.transform.forward * Random.Range(fallingForce/2,fallingForce), ForceMode.Impulse);
+            rb.AddForce(player.transform.forward * Random.Range(fallingForce/2,fallingForce) * 0.5f, ForceMode.Impulse);
         }
     }
 
@@ -94,13 +92,11 @@ public class Door : MonoBehaviour
     /// <summary>
     /// Removes a hinge and checks if there are any left other wise the door is lose and falls over
     /// </summary>
-    public void removeHinge(Transform player)
+    public void removeHinge(Transform player,GameObject hingeObj)
     {
-        if(hingeCount > 1)
-        {
-            hingeCount --;
-        }
-        else
+        hingePoints.Remove(hingeObj);
+
+        if(hingePoints.Count <= 0)
         {
             gameObject.layer = LayerMask.NameToLayer(colliderLayer);
             foreach (Transform child in transform)
@@ -116,6 +112,7 @@ public class Door : MonoBehaviour
             {
                 Destroy(hinge);
             }
+
             rb.AddForce(player.transform.forward * Random.Range(fallingForce/2,fallingForce), ForceMode.Impulse);
         }
     }
