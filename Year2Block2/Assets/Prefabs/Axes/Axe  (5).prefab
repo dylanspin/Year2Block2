@@ -230,9 +230,10 @@ GameObject:
   - component: {fileID: 7344956482136252004}
   - component: {fileID: 7344956482136252027}
   - component: {fileID: 7344956482136252026}
+  - component: {fileID: 6971417519228400603}
   m_Layer: 7
   m_Name: Axe  (5)
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,10 +322,34 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6971417519228400603}
+        m_TargetAssemblyTypeName: ItemHold, Assembly-CSharp
+        m_MethodName: setGrab
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6971417519228400603}
+        m_TargetAssemblyTypeName: ItemHold, Assembly-CSharp
+        m_MethodName: setGrab
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -409,6 +434,23 @@ MonoBehaviour:
   secondGrab: {fileID: 7344956481964357651}
   axeHead: {fileID: 7344956481248149777}
   axeRb: {fileID: 7344956482136252004}
+--- !u!114 &6971417519228400603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344956482136252025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c6e4e5f490c8543a78afed14a17937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testMesh: {fileID: 8227815525165624426}
+  testMat:
+  - {fileID: 2100000, guid: 91b6c82de3d03654ab351ed2ab858dcf, type: 2}
+  - {fileID: 2100000, guid: b2533edfc19f209479d93578f22d568d, type: 2}
+  objectRb: {fileID: 7344956482136252004}
 --- !u!1 &7344956482233351199
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,3 +722,9 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0675344, y: 0.82150215, z: 4.8806562}
   m_Center: {x: 9.086128, y: -0.02845183, z: 1.5807712}
+--- !u!23 &8227815525165624426 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e0dc56b7c526af0419633eb1734bf65b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7344956481798828270}
+  m_PrefabAsset: {fileID: 0}
