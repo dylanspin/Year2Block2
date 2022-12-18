@@ -29,7 +29,8 @@ public class ItemHold : MonoBehaviour
     public void setGrab(bool active)
     {
         grabbed = active;
-        testMesh.material = active ? testMat[0] : testMat[1];
+        // testingGrab(grabbed);
+        
         if(!active)
         {
             Holder closedPos = getClosed();
@@ -48,6 +49,15 @@ public class ItemHold : MonoBehaviour
                 setHold(false);
             }
         }
+    }
+
+
+    /// <summary>
+    /// Changes the materials to indicate if its grabbed or not
+    /// </summary>
+    private void testingGrab(bool active)
+    {
+        testMesh.material = active ? testMat[0] : testMat[1];
     }
 
     /// <summary>
@@ -74,13 +84,16 @@ public class ItemHold : MonoBehaviour
     /// </summary>
     public void setIntrigger(Holder newAdd,bool add)
     {
-        if(!inTriggerList.Contains(newAdd))
+        if(add)
         {
-            if(add)
+            if(!inTriggerList.Contains(newAdd))
             {
                 inTriggerList.Add(newAdd);
             }
-            else
+        }
+        else
+        {
+            if(inTriggerList.Contains(newAdd))
             {
                 inTriggerList.Remove(newAdd);
             }

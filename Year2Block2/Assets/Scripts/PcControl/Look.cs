@@ -48,4 +48,9 @@ public class Look : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation,0f,0f);//rotates this object for looking up and down
         playerBody.Rotate(Vector3.up * mouseX);//rotates the horizontal player object
     }
+
+    public float getSetHeight()
+    {
+        return setHeadHeight;
+    }
 }

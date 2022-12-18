@@ -5,6 +5,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Doll : MonoBehaviour
 {   
+    /*
+        Not needed anymore 
+    */
     [SerializeField] private Material[] testmat;
     [SerializeField] private MeshRenderer[] testRender;
 
@@ -71,7 +74,7 @@ public class Doll : MonoBehaviour
     {
         if(grabbed <= 0)
         {
-            setAllLayer(true);
+            // setAllLayer(true);
             testing(true);
         }
 
@@ -85,7 +88,7 @@ public class Doll : MonoBehaviour
     {
         if(grabbed <= 1)
         {
-            setAllLayer(false);
+            // setAllLayer(false);
             testing(false);
         }
 

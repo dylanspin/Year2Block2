@@ -3252,7 +3252,7 @@ MonoBehaviour:
   anchorOffset: {x: 0, y: 1, z: 2}
   rotationAxis: {x: 0, y: 90, z: 0}
   rotationLimits: {x: -90, y: 90}
-  breakingVel: 1.5
+  breakingVel: 4
   fallingForce: 100
   colliderLayer: NonColliding
   hingePoints:

@@ -753,10 +753,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ccc4a527e4912824a83e4c3fddf46687, type: 2}
+    - target: {fileID: -516098083770646512, guid: 1a873b59973f0a648a91193f5ec0be40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1a873b59973f0a648a91193f5ec0be40,
         type: 3}
       propertyPath: m_Name
       value: axeStandingRack
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1a873b59973f0a648a91193f5ec0be40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507901977716847365, guid: 1a873b59973f0a648a91193f5ec0be40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7339356831882890532, guid: 1a873b59973f0a648a91193f5ec0be40,
         type: 3}

@@ -87,7 +87,12 @@ public class RBMovement : MonoBehaviour
     private void followHeadset()
     {
         playerCol.height = playerHead.CameraInOriginSpaceHeight + extraHeight;
-        Vector3 centerCollider = transform.InverseTransformPoint(playerHead.transform.position);
+        Vector3 centerCollider = transform.InverseTransformPoint(playerHead.Camera.transform.position);
         playerCol.center = new Vector3(centerCollider.x, playerCol.height/2,centerCollider.z);
+    }
+
+    public void setRunning(bool active)
+    {
+        currentSpeed = active? runningSpeed : walkingSpeed;
     }
 }

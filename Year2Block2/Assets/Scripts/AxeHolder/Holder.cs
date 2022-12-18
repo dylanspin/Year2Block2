@@ -81,12 +81,9 @@ public class Holder : MonoBehaviour
     /// </summary>
     private void showIndicator(bool active)
     {
-        if(!holding)
+        if(ghostIndicator)
         {
-            if(ghostIndicator)
-            {
-                ghostIndicator.SetActive(active);
-            }
+            ghostIndicator.SetActive(active && !holding);
         }
     }
 
@@ -96,6 +93,10 @@ public class Holder : MonoBehaviour
     public void setHold(bool active)
     {
         holding = active;
+        if(holding)
+        {
+            showIndicator(false);
+        }
     }
 
     /// <summary>
