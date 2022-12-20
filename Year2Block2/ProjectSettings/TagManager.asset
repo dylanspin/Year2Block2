@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Grabbable
+  - Doll
   layers:
   - Default
   - TransparentFX
