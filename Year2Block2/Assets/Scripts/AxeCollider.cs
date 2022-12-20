@@ -91,12 +91,12 @@ public class AxeCollider : MonoBehaviour
     /// </summary>
     public void ActivateHaptic()
     {
-        for(int i=0; i<controller.Count; i++)
-        {
-            if(controller[i])
-            {
-                controller[i].SendHapticImpulse(0.7f, 2f);
-            }
-        }
+        // for(int i=0; i<controller.Count; i++)
+        // {
+        //     if(controller[i])
+        //     {
+        //         controller[i].SendHapticImpulse(0.7f, 2f);
+        //     }
+        // }
     }
 }

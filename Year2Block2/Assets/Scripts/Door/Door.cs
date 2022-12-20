@@ -24,6 +24,9 @@ public class Door : MonoBehaviour
 
     [Header("Settings")]
 
+    [Tooltip("If after one hit the whole door breaks")]
+    [SerializeField] private bool breakAll = false;
+
     [Tooltip("The min velocity needed to break the door")]
     [SerializeField] private float breakingVel = 1.5f;
 
@@ -120,13 +123,25 @@ public class Door : MonoBehaviour
     /// <summary>
     /// Checks all pieces still in the list if they still have another connection
     /// </summary>
-    public void checkAll()
+    public void checkAll(Transform player,bool placeHolder)
     {
         for(int i=0; i<allPoints.Length; i++)
         {
             if(allPoints[i])//if the piece still excist
             {
-                allPoints[i].checkEmpty();
+                if(placeHolder)
+                {
+                    allPoints[i].gameObject.SetActive(true);
+                }
+                
+                if(breakAll)
+                {
+                    allPoints[i].breakPiece(player);
+                }
+                else
+                {
+                    allPoints[i].checkEmpty(player);
+                }
             }
         }
     }

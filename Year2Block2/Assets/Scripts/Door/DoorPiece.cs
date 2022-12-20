@@ -8,7 +8,10 @@ using UnityEngine;
 
 public class DoorPiece : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Settings")]    
+
+    [Tooltip("if all pieces break then this enables break parts when hit")]
+    [SerializeField] private bool placeHolder = false;
 
     [Tooltip("if hinge breaking point of the door")]
     [SerializeField] private bool hingePoint = false;
@@ -59,10 +62,9 @@ public class DoorPiece : MonoBehaviour
         {
             if(velocity >= breakingVel)
             {
-                breakPiece();
+                breakPiece(player);
 
-                checkConnection(player);
-                axeScript.ActivateHaptic();
+                startCheckHasConnection(player);
             }
         }
     }
@@ -70,36 +72,37 @@ public class DoorPiece : MonoBehaviour
     /// <summary>
     /// Breaks of piece of the door
     /// </summary>
-    private void breakPiece()
+    public void breakPiece(Transform player)
     {
         broken = true;
-        gameObject.layer = LayerMask.NameToLayer(colliderLayer);
-        gameObject.AddComponent<Rigidbody>();
-        Destroy(gameObject,2);
+
+        if(placeHolder)//if place holder collider
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            if(hingePoint)
+            {
+                doorScript.removeHinge(player,gameObject);
+            }
+
+            if(isLock)
+            {
+                doorScript.removeLock(player);
+            }
+            
+            gameObject.layer = LayerMask.NameToLayer(colliderLayer);
+            gameObject.AddComponent<Rigidbody>();
+            Destroy(gameObject,2);
+        }
     }
 
-    /// <summary>
-    /// Checks if its a hinge broken and checks if lose pieces should fall off or not
-    /// </summary>
-    private void checkConnection(Transform player)
-    {
-        if(hingePoint)
-        {
-            doorScript.removeHinge(player,gameObject);
-        }
-
-        if(isLock)
-        {
-            doorScript.removeLock(player);
-        }
-
-        startCheckHasConnection();
-    }
 
     /// <summary>
     /// Start of check if lose pieces should fall off or not
     /// </summary>
-    private void startCheckHasConnection()
+    private void startCheckHasConnection(Transform player)
     {
         List<DoorPiece> checkAll = new List<DoorPiece>();
 
@@ -107,11 +110,11 @@ public class DoorPiece : MonoBehaviour
         {
             if(connectedParts[i])
             {
-                connectedParts[i].removeFromCheck(this);
+                connectedParts[i].removeFromCheck(this,player);
             }
         }
 
-        doorScript.checkAll();
+        doorScript.checkAll(player,placeHolder);
 
         // checkConnection(checkAll,0,this);
     }   
@@ -145,13 +148,13 @@ public class DoorPiece : MonoBehaviour
     /// <summary>
     /// Removes the initial broken piece from all the connected parts their list
     /// </summary>
-    public void removeFromCheck(DoorPiece removeScript)
+    public void removeFromCheck(DoorPiece removeScript,Transform player)
     {
         if(!broken)
         {
             if(connectedParts.Count <= 1)
             {
-                breakPiece();
+                breakPiece(player);
             }
 
             connectedParts.Remove(removeScript);
@@ -161,7 +164,7 @@ public class DoorPiece : MonoBehaviour
     /// <summary>
     /// Double check if there is a empty one in list
     /// </summary>
-    public void checkEmpty()
+    public void checkEmpty(Transform player)
     {
         if(!broken)
         {
@@ -174,7 +177,7 @@ public class DoorPiece : MonoBehaviour
             }
             if(connectedParts.Count <= 1)
             {
-                breakPiece();
+                breakPiece(player);
             }
         }
     }
