@@ -51,12 +51,12 @@ public class AnimateHand : MonoBehaviour
     {
         float flex;
         float pinch;
+        bool grabbing = false;
 
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.trigger, out pinch);
         device.TryGetFeatureValue(CommonUsages.grip, out flex);
 
-        bool grabbing = false;
         HandPose grabPose = defaultHand;
         
         HandPoseId handPoseId = grabPose.PoseId;

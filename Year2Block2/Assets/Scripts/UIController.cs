@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         if(Application.isEditor)
         {

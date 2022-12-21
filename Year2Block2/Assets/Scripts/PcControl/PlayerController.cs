@@ -4,16 +4,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Components")]
 
-    [Header("Testing Objects")]
-    [SerializeField] private GameObject[] testingObject;
+    [Tooltip("Animator that controlls the transition effects")]
+    [SerializeField] private Animator transitionAnim;
 
     [Header("Scripts")]
-    [SerializeField] private Movement moveScript;
+
+    [Tooltip("The script that controlls the health of the player")]
+    [SerializeField] private Health healthScript;
+
+    [Tooltip("The script that allows looking around with pc controlls")]
     [SerializeField] private Look lookScript;
 
+    [Tooltip("The script that controlls the whole scene")]
+    [SerializeField] private GameController controllerScript;
+
+    /// <summary>
+    /// Sets the start information of scritps
+    /// </summary>  
     private void Start()
     {
+        controllerScript.setStart(this);
+        transitionAnim.gameObject.SetActive(true);
         setStart();
     }
 
@@ -24,22 +37,22 @@ public class PlayerController : MonoBehaviour
     {
         bool isEditor = Application.isEditor;
 
-        if(testingObject.Length > 0)
-        {
-            for(int i=0; i<testingObject.Length; i++)
-            {
-                testingObject[i].SetActive(isEditor);
-            }
-        }
-
-        if(moveScript)
-        {
-            moveScript.enabled = isEditor;
-        }
-        
         if(lookScript)
         {
             lookScript.enabled = isEditor;
         }
+        
+        if(healthScript)
+        {
+            healthScript.setStart(this);
+        }
+    }
+
+    /// <summary>
+    /// When the player lost all their health
+    /// </summary>  
+    public void lostGame()
+    {
+        controllerScript.lostGame();
     }
 }

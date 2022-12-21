@@ -5,12 +5,28 @@ using UnityEngine.UI;
 
 public class EndPoint : MonoBehaviour
 {
-    [SerializeField] private TMPro.TextMeshProUGUI count;
+    [Header("Settings")]
+
+    [Tooltip("Tag of the root object of the rescue people")]
     [SerializeField] private string triggerTag = "Doll";
 
-    [SerializeField] private List<GameObject> inMapHostages = new List<GameObject>();
+    [Header("Scripts")]
 
-    private List<GameObject> hostages = new List<GameObject>();
+    [Tooltip("Controller of the scene")]
+    [SerializeField] private GameController controllerScript;
+    
+    [Header("UI")]
+
+    [Tooltip("The text that displayes how many people have been Rescued")]
+    [SerializeField] private TMPro.TextMeshProUGUI count;
+
+    [Header("Components")]
+
+    [Tooltip("The text that displayes how many people have been Rescued")]
+    [SerializeField] private List<GameObject> inMapPeople = new List<GameObject>();
+
+    [Header("Private Data")]
+    private List<GameObject> people = new List<GameObject>();
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -29,18 +45,26 @@ public class EndPoint : MonoBehaviour
     {
         GameObject rootObj = other.transform.root.gameObject;
 
-        if(rootObj.tag == triggerTag)
+        if(rootObj.tag == triggerTag)//if it is a people/doll
         {
-            if(!hostages.Contains(rootObj))
+            if(!people.Contains(rootObj))//if not already resqued
             {
-                hostages.Add(rootObj);
+                people.Add(rootObj);
                 setText();
+
+                if(people.Count >= inMapPeople.Count)//if all people are resqued 
+                {
+                    controllerScript.wonGame();
+                }
             }
         }
     }
 
+    /// <summary>
+    /// Sets the UI count
+    /// </summary>
     private void setText()
     {
-        count.text = hostages.Count + " Out Of " + inMapHostages.Count + " Rescued";
+        count.text = people.Count + " Out Of " + inMapPeople.Count + " Rescued";
     }
 }
