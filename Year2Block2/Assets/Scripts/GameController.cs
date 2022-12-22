@@ -5,27 +5,16 @@ public class GameController : MonoBehaviour
 {   
     [Header("Private data")]
     private PlayerController controllerScript;
-    private Animator endAnim;
+    private endEffect endController;
 
-    public void setStart(PlayerController newController)
+    public void setStart(PlayerController newController,endEffect newEnd)
     {
         controllerScript = newController;
+        endController = newEnd;
     }
 
-    public void wonGame()
+    public void setEnd(bool active)
     {
-        
-    }
-    public void lostGame()
-    {
-
-    }
-
-    /// <summary>
-    /// After the game is lost animation is shown then the scene is reloaded
-    /// </summary>
-    public void reloadScene()
-    {
-
+        endController.setState(active);
     }
 }

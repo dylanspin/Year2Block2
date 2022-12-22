@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Components")]
 
-    [Tooltip("Animator that controlls the transition effects")]
-    [SerializeField] private Animator transitionAnim;
+    [Tooltip("Script that controlls the transition effects")]
+    [SerializeField] private endEffect transitionController;
 
     [Header("Scripts")]
 
@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>  
     private void Start()
     {
-        controllerScript.setStart(this);
-        transitionAnim.gameObject.SetActive(true);
+        if(controllerScript)
+        {
+            controllerScript.setStart(this,transitionController);
+        }
+        transitionController.gameObject.SetActive(true);
         setStart();
     }
 
@@ -53,6 +56,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>  
     public void lostGame()
     {
-        controllerScript.lostGame();
+        controllerScript.setEnd(false);
     }
 }

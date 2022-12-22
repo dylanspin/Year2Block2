@@ -54,7 +54,7 @@ public class EndPoint : MonoBehaviour
 
                 if(people.Count >= inMapPeople.Count)//if all people are resqued 
                 {
-                    controllerScript.wonGame();
+                    controllerScript.setEnd(true);
                 }
             }
         }
