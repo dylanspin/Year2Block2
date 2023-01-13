@@ -15,7 +15,7 @@ C:/Users/Sergiu/Documents/GitHub/Year2Block2/Year2Block2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53553
+58203
 Successfully changed project path to: C:/Users/Sergiu/Documents/GitHub/Year2Block2/Year2Block2
 C:/Users/Sergiu/Documents/GitHub/Year2Block2/Year2Block2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,8 +47,8 @@ C:/Users/Sergiu/Documents/GitHub/Year2Block2/Year2Block2
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 108.67 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.44 ms.
+Refreshing native plugins compatible for Editor in 102.56 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.40 ms.
 Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.3.10f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Sergiu/Documents/GitHub/Year2Block2/Year2Block2/Assets
@@ -64,37 +64,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2021.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001694 seconds.
+Registered in 0.001492 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 101.70 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 91.74 ms, found 13 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.383 seconds
+- Completed reload, in  0.372 seconds
 Domain Reload Profiling:
-	ReloadAssembly (383ms)
-		BeginReloadAssembly (38ms)
+	ReloadAssembly (372ms)
+		BeginReloadAssembly (39ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (292ms)
-			LoadAssemblies (37ms)
+		EndReloadAssembly (279ms)
+			LoadAssemblies (38ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (52ms)
+			SetupTypeCache (51ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (14ms)
-			SetupLoadedEditorAssemblies (199ms)
+			RebuildScriptCaches (13ms)
+			SetupLoadedEditorAssemblies (188ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (102ms)
+				RefreshPlugins (92ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (69ms)
+				ProcessInitializeOnLoadAttributes (68ms)
 				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -102,10 +102,12 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005910 seconds.
+Registered in 0.005244 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Sergiu\Documents\GitHub\Year2Block2\Year2Block2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Sergiu\Documents\GitHub\Year2Block2\Year2Block2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 114.23 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 103.00 ms, found 13 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
 Package Manager log level set to [2]
 [XR] OculusXRPlugin: registering subsystems
@@ -114,123 +116,44 @@ Package Manager log level set to [2]
 [XR] Unable to register input lifecyle provider: [1]
 [XR] OVRP version 1.79.0
 Mono: successfully reloaded assembly
-- Completed reload, in  1.073 seconds
+- Completed reload, in  0.952 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1074ms)
+	ReloadAssembly (952ms)
 		BeginReloadAssembly (60ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (953ms)
-			LoadAssemblies (55ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (824ms)
+			LoadAssemblies (58ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (205ms)
+			SetupTypeCache (200ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (77ms)
-			SetupLoadedEditorAssemblies (583ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (482ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (114ms)
-				BeforeProcessingInitializeOnLoad (110ms)
-				ProcessInitializeOnLoadAttributes (294ms)
-				ProcessInitializeOnLoadMethodAttributes (59ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				RefreshPlugins (103ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (230ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 2.61 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 8073 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (1.5 MB). Loaded Objects now: 8486.
-Memory consumption went from 325.0 MB to 323.5 MB.
-Total: 3.956500 ms (FindLiveObjects: 0.519900 ms CreateObjectMapping: 0.298700 ms MarkObjects: 2.730400 ms  DeleteObjects: 0.406800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 591295.296960 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(0cc1b79de78bc4991892d4d342d7211a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(0cc1b79de78bc4991892d4d342d7211a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464905cf348a3030ff915904016b0176') in 0.015493 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.550573 seconds.
-  path: Assets/Scenes/LoadingScreen.unity
-  artifactKey: Guid(49a884722c91f264ba409257f32586a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/LoadingScreen.unity using Guid(49a884722c91f264ba409257f32586a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91591a7042f52a1804a2d3201d7af70c') in 0.003653 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.809353 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(094a22c0e88abc44e9f20d16ad1a1a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(094a22c0e88abc44e9f20d16ad1a1a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b27325fd71444cc869e1697ffb315ed7') in 0.012406 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.034948 seconds.
-  path: Assets/Scenes/save.unity
-  artifactKey: Guid(45a52d79cc393cc4eb1d4042e9fdf7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/save.unity using Guid(45a52d79cc393cc4eb1d4042e9fdf7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be69e7b21398d714f6cf6088da8dbc32') in 0.003788 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007409 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 1.64 ms, found 13 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.848 seconds
-Domain Reload Profiling:
-	ReloadAssembly (848ms)
-		BeginReloadAssembly (105ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (693ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (216ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (328ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (196ms)
-				ProcessInitializeOnLoadMethodAttributes (51ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 5.32 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 7831 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.5 MB). Loaded Objects now: 8490.
-Memory consumption went from 316.0 MB to 314.4 MB.
-Total: 4.567200 ms (FindLiveObjects: 0.805800 ms CreateObjectMapping: 0.193800 ms MarkObjects: 3.085600 ms  DeleteObjects: 0.481300 ms)
+Unloading 8077 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (1.5 MB). Loaded Objects now: 8499.
+Memory consumption went from 399.8 MB to 398.2 MB.
+Total: 4.308000 ms (FindLiveObjects: 0.582400 ms CreateObjectMapping: 0.145500 ms MarkObjects: 3.140100 ms  DeleteObjects: 0.439300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -244,220 +167,292 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 123.239254 seconds.
-  path: Assets/Scenes/Game
-  artifactKey: Guid(14b20723558659d4ba1176e67b3e75cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game using Guid(14b20723558659d4ba1176e67b3e75cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b1b3b665e93cd5ec09adf5285624169') in 0.015072 seconds 
+  Time since last request: 65740.513663 seconds.
+  path: Assets/VFX/ffire.mat
+  artifactKey: Guid(6654582db084fc140b274df4fa01f60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/ffire.mat using Guid(6654582db084fc140b274df4fa01f60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a436e77277ea7758cf8c61f2386067') in 0.165161 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.258883 seconds.
-  path: Assets/Scenes/Game/LightingData.asset
-  artifactKey: Guid(2b392c2296803d449b9c99eb1ca644fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game/LightingData.asset using Guid(2b392c2296803d449b9c99eb1ca644fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29d04da75c4ae467601696bfdfaf1569') in 0.022072 seconds 
+  Time since last request: 73.389922 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/XingLightMaterial.mat
+  artifactKey: Guid(b99b44499a77b3645b481d4f7d0ddf33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/XingLightMaterial.mat using Guid(b99b44499a77b3645b481d4f7d0ddf33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b852b8159ff93154316ed9a592b9c6') in 0.018099 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/Scenes/Game/ReflectionProbe-0.exr
-  artifactKey: Guid(de4cb10451ea3ea4cbbac04108ae6ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game/ReflectionProbe-0.exr using Guid(de4cb10451ea3ea4cbbac04108ae6ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c7c63fb631cafaac63cdf2f21aba58') in 0.134519 seconds 
+  path: Assets/ImportOBJ/Axe/axeExport-10.fbx
+  artifactKey: Guid(9b523c3081ee63c45a01532613e02b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ImportOBJ/Axe/axeExport-10.fbx using Guid(9b523c3081ee63c45a01532613e02b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb51441a07777deafb278042569469cd') in 0.075007 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.797975 seconds.
-  path: Assets/Scenes/ExampleAssets
-  artifactKey: Guid(83b7bbecd9fac4db9824039903a1eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ExampleAssets using Guid(83b7bbecd9fac4db9824039903a1eea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e87ec44381814a26b24ab8af8480de6') in 0.003573 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/WoodDark.mat
+  artifactKey: Guid(47dc5a096e1063a47b2d9afb0ecc8e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/WoodDark.mat using Guid(47dc5a096e1063a47b2d9afb0ecc8e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f4befdd9e653e9811d13e3d83a5810') in 0.013697 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.368470 seconds.
-  path: Assets/Scenes/Default
-  artifactKey: Guid(cd6d84fff8fc5ec4ca22391e2b39068c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Default using Guid(cd6d84fff8fc5ec4ca22391e2b39068c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1063282a1cfa2ab811787bbcf23b2411') in 0.003527 seconds 
+  Time since last request: 2.534770 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Environment/Room/Materials/SmallRoomFabricMat.mat
+  artifactKey: Guid(1763fc9a4692c3342a463a94fe70f9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Environment/Room/Materials/SmallRoomFabricMat.mat using Guid(1763fc9a4692c3342a463a94fe70f9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d1d7c8fc342c707f75d49b430a1c5c0') in 0.025293 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.701830 seconds.
-  path: Assets/Scripts
-  artifactKey: Guid(177f2d127a6b05842842804f31f9ea4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(177f2d127a6b05842842804f31f9ea4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3b36056e355891faf5b0ee7459ac96e') in 0.003688 seconds 
+  Time since last request: 0.000020 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Environment/SmallRoom/Materials/SmallRoomFurnitureMat.mat
+  artifactKey: Guid(11a68679012f52242bdfabd814bd5db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Environment/SmallRoom/Materials/SmallRoomFurnitureMat.mat using Guid(11a68679012f52242bdfabd814bd5db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd2a21abfc4c6fcfc2e51fe0c1b6fd7') in 0.023212 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.305856 seconds.
-  path: Assets/Scripts/AxeCollider.cs
-  artifactKey: Guid(2b2cda2ef7622e9469274da5b6a5a142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AxeCollider.cs using Guid(2b2cda2ef7622e9469274da5b6a5a142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba55cd3d492b3727ee6165570fedbef0') in 0.023217 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Environment/SmallRoom/Materials/SmallRoomFabricMat.mat
+  artifactKey: Guid(8ad3dfbb5f0703a4f911a6aad201242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Environment/SmallRoom/Materials/SmallRoomFabricMat.mat using Guid(8ad3dfbb5f0703a4f911a6aad201242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cce2f45f279cbe5f1fae1800b3ba2fd') in 0.014614 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 62.498027 seconds.
-  path: Assets/Scripts/Doll.cs
-  artifactKey: Guid(96f46ea1dbdb59f4dbe0322abe176aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Doll.cs using Guid(96f46ea1dbdb59f4dbe0322abe176aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65292f644f0ce6dae2dbc53e28c1d1c2') in 0.004540 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_02/Skybox02.mat
+  artifactKey: Guid(b709a9919bd4047b58bb05887b4faad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_02/Skybox02.mat using Guid(b709a9919bd4047b58bb05887b4faad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f36705d23ff98f61272b7cb842e05d7') in 0.136577 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.418782 seconds.
-  path: Assets/Scripts/endEffect.cs
-  artifactKey: Guid(3fd4cd8ef8da1b643b74094f9d77fd7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/endEffect.cs using Guid(3fd4cd8ef8da1b643b74094f9d77fd7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28b9e7f5f1f999b1df3b02f53ad121c9') in 0.003605 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Environment/Room/Materials/SmallRoomFloorMat.mat
+  artifactKey: Guid(b624eb706ce7c97438315f00a239e3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Environment/Room/Materials/SmallRoomFloorMat.mat using Guid(b624eb706ce7c97438315f00a239e3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db68c08fdc7f4499ac3bf5c2ffeb134') in 0.015533 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.642399 seconds.
-  path: Assets/Scripts/EndPoint.cs
-  artifactKey: Guid(88acf100a477f2f43b630a58930d835c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/EndPoint.cs using Guid(88acf100a477f2f43b630a58930d835c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed9f1093184fe129ce15b8c51d0733d') in 0.003722 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Environment/SmallRoom/Materials/SmallRoomWoodMat.mat
+  artifactKey: Guid(bf09a13417d901f49b56df5176f9d7ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Environment/SmallRoom/Materials/SmallRoomWoodMat.mat using Guid(bf09a13417d901f49b56df5176f9d7ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b27a5b10727d3c8fecf262266fdc67f') in 0.017912 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.489692 seconds.
-  path: Assets/Scripts/GameController.cs
-  artifactKey: Guid(323eba7301b8eb6458cb47e755f93af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameController.cs using Guid(323eba7301b8eb6458cb47e755f93af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e63924bf4fed2c1b767ee328e340bc28') in 0.003884 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01Mat.mat
+  artifactKey: Guid(b6121f1ede3dbe848a9c9de2ef369c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01Mat.mat using Guid(b6121f1ede3dbe848a9c9de2ef369c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe98472788571753a4ad5abebcd2c3d') in 0.017150 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.564579 seconds.
-  path: Assets/Scripts/HeadGearController.cs
-  artifactKey: Guid(ca59241a8bfb24d44a4cfaee090ab627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/HeadGearController.cs using Guid(ca59241a8bfb24d44a4cfaee090ab627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dec13b113c6585984246548028a5d9c') in 0.004005 seconds 
+  Time since last request: 0.000018 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/DistanceGrab/SkyboxMat.mat
+  artifactKey: Guid(59e9fddc38d83c84689eb3deb601b970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/DistanceGrab/SkyboxMat.mat using Guid(59e9fddc38d83c84689eb3deb601b970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '644d9fa6174ee2d44754725a0904b2f2') in 0.014707 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.042705 seconds.
-  path: Assets/Scripts/Health.cs
-  artifactKey: Guid(83284a6e91046e4499ded7eef1ce2a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Health.cs using Guid(83284a6e91046e4499ded7eef1ce2a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef9f3faba7c90dce010dff8e3329d00') in 0.003883 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.484507 seconds.
-  path: Assets/Scripts/Running.cs
-  artifactKey: Guid(2193b62d30d918642bd8ba7566d2a07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Running.cs using Guid(2193b62d30d918642bd8ba7566d2a07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f86d079b0b6f9dc40faa026b18c24b') in 0.003668 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.017659 seconds.
-  path: Assets/Scripts/UIController.cs
-  artifactKey: Guid(dce4bd48aead9d64a953be9e7555717c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UIController.cs using Guid(dce4bd48aead9d64a953be9e7555717c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e474dbb424254a7f54a7f72122c15b6f') in 0.004541 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 105.862246 seconds.
-  path: Assets/Scripts/AxeHolder
-  artifactKey: Guid(3ea80b8f21992f547a9c1f85b0c873dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AxeHolder using Guid(3ea80b8f21992f547a9c1f85b0c873dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e351769d18e03a503b338b2131d5914') in 0.013371 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.886925 seconds.
-  path: Assets/Scripts/AxeHolder/Holder.cs
-  artifactKey: Guid(2e8f21afc5289774ea0450bb454ccde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AxeHolder/Holder.cs using Guid(2e8f21afc5289774ea0450bb454ccde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ba282da2a6b5b59f97e1da5772ef6bc') in 0.004722 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.203396 seconds.
-  path: Assets/Scripts/AxeHolder/ItemHold.cs
-  artifactKey: Guid(e3c6e4e5f490c8543a78afed14a17937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AxeHolder/ItemHold.cs using Guid(e3c6e4e5f490c8543a78afed14a17937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dcced371398145d20a9e5c8f0ce6771') in 0.003966 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.577172 seconds.
-  path: Assets/Scripts/Door
-  artifactKey: Guid(f67c6b9139ed51140a9d15344161412f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Door using Guid(f67c6b9139ed51140a9d15344161412f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe6be8309c475fd594b35be9c2e0c22') in 0.003811 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.849920 seconds.
-  path: Assets/Scripts/Door/Door.cs
-  artifactKey: Guid(97da49f3926f1cb4bbac3ab6770059ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Door/Door.cs using Guid(97da49f3926f1cb4bbac3ab6770059ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c698aeb6e2de4fbf7281e1dc24a3fc') in 0.001406 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 40.861347 seconds.
-  path: Assets/Scripts/Old Controller
-  artifactKey: Guid(a260d0c29f5eba04291dc40ef039aa1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Old Controller using Guid(a260d0c29f5eba04291dc40ef039aa1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152e846ff2e91043856b025eeafb27f2') in 0.004687 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.840505 seconds.
-  path: Assets/Scripts/PcControl
-  artifactKey: Guid(7b36e21ba17ce9d4aa9bc4c5b16cd289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PcControl using Guid(7b36e21ba17ce9d4aa9bc4c5b16cd289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d6c6abd15e030cc8ca89ec9a60da9b2') in 0.003572 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.104582 seconds.
-  path: Assets/Scripts/PcControl/TempAxeSwing.cs
-  artifactKey: Guid(90a3cd86638b9e54086b7b6d353816bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PcControl/TempAxeSwing.cs using Guid(90a3cd86638b9e54086b7b6d353816bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c705a0ff3addf0cf791e1a7171a0f7') in 0.003785 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.882262 seconds.
-  path: Assets/Scripts/PcControl/PlayerController.cs
-  artifactKey: Guid(e4482f43c17764f4da2319677f6b5f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PcControl/PlayerController.cs using Guid(e4482f43c17764f4da2319677f6b5f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b581d01cd9d08654072e2252609e01bf') in 0.003872 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.635271 seconds.
-  path: Assets/Scripts/PcControl/Movement.cs
-  artifactKey: Guid(de037578eb6a20643957c9fb5ef6a544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PcControl/Movement.cs using Guid(de037578eb6a20643957c9fb5ef6a544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bbaf5004b822e8ca1da06c1edff62e2') in 0.003739 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.630282 seconds.
-  path: Assets/Scripts/PcControl/Look.cs
-  artifactKey: Guid(706d86f5c37ce1c49a6d8e09038d44dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PcControl/Look.cs using Guid(706d86f5c37ce1c49a6d8e09038d44dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09e4753b462b88ee1789858520fe366') in 0.003947 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.856317 seconds.
-  path: Assets/Scripts/Xr
-  artifactKey: Guid(a90e624e1be6b9d4d8edf76efd1b181a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Xr using Guid(a90e624e1be6b9d4d8edf76efd1b181a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22777340f2f6911ac25a1374d7101658') in 0.004229 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.963722 seconds.
-  path: Assets/Scripts/Xr/AnimateHand.cs
-  artifactKey: Guid(0789abd05c6e34d418528772c891200c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Xr/AnimateHand.cs using Guid(0789abd05c6e34d418528772c891200c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c49969e86a01b2f2c8083de2520695a') in 0.003653 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.169514 seconds.
-  path: Assets/Scripts/Xr/RBMovement.cs
-  artifactKey: Guid(cb5e8093bc5dc244b9d35a3ff9b3f3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Xr/RBMovement.cs using Guid(cb5e8093bc5dc244b9d35a3ff9b3f3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be687fe7922092fd7c4dad3ec7384c7') in 0.003805 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.849546 seconds.
-  path: Assets/Scripts/Xr/TwoHanded.cs
-  artifactKey: Guid(a8a45f1bb92e8fb419dfde65770d646d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Xr/TwoHanded.cs using Guid(a8a45f1bb92e8fb419dfde65770d646d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203df9649af83fd4a6c72b6031db8f94') in 0.003783 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.407813 seconds.
-  path: Assets/Scripts/Xr/XRMovement.cs
-  artifactKey: Guid(8e2f464096e27e3409c0ad0751313e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Xr/XRMovement.cs using Guid(8e2f464096e27e3409c0ad0751313e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '704c6637404a4d2fc4d23565bb782e3a') in 0.003675 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 406.842403 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.004331 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.572253 seconds.
-  path: Assets/sound effects
-  artifactKey: Guid(f437ef89657b332448885de70fc79377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/sound effects using Guid(f437ef89657b332448885de70fc79377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e947f5d35eb19903e4d990de3626a6') in 0.003775 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.195750 seconds.
-  path: Assets/sound effects/fire-sound-efftect-21991.mp3
-  artifactKey: Guid(2ae1957b8a6fba54a9462cbc7300be02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/sound effects/fire-sound-efftect-21991.mp3 using Guid(2ae1957b8a6fba54a9462cbc7300be02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efa7ba86d9bb302d332e3979119cc95b') in 0.054912 seconds 
+  Time since last request: 0.104868 seconds.
+  path: Assets/Materials/Axe/RedMetal.mat
+  artifactKey: Guid(ed476ace7c43c114aaf5d93e9de4f8c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Axe/RedMetal.mat using Guid(ed476ace7c43c114aaf5d93e9de4f8c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71626650302d48a84de1845019827c58') in 0.779062 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/sound effects/heartbeat-sound-effect-111218.mp3
-  artifactKey: Guid(e1cdb3db9902506479fa9c3706fc45ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/sound effects/heartbeat-sound-effect-111218.mp3 using Guid(e1cdb3db9902506479fa9c3706fc45ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35aaacc79aab03c3fc3585d998800423') in 0.010085 seconds 
+  path: Assets/Oculus/SampleFramework/Usage/OVROverlay/Materials/OverlayDynamicTexture.mat
+  artifactKey: Guid(5365fc7c3d82d4343b1591d8ea4bd539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/OVROverlay/Materials/OverlayDynamicTexture.mat using Guid(5365fc7c3d82d4343b1591d8ea4bd539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2e7604842d90e569d5d3155c1be730e') in 0.017082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Oculus/Interaction/Samples/Materials/PeaceParticle.mat
+  artifactKey: Guid(fd99b5750768afe49a50b7cc49e23729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Materials/PeaceParticle.mat using Guid(fd99b5750768afe49a50b7cc49e23729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'add3956eea2ea43f4c36e093c6252689') in 0.017527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/PassthroughBrushStroke.mat
+  artifactKey: Guid(0ff7438fe513d7e4295f6ec9b5b623d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/PassthroughBrushStroke.mat using Guid(0ff7438fe513d7e4295f6ec9b5b623d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c8cb053687350881e2f11b5252a1ba') in 0.015777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/SpatialAnchor/Materials/Passthrough.mat
+  artifactKey: Guid(e5462914f0e0ad646bd4fdabf728279c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/SpatialAnchor/Materials/Passthrough.mat using Guid(e5462914f0e0ad646bd4fdabf728279c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7fd8ce50853b52e76fc1d8744471e3') in 0.015717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Oculus/SampleFramework/Core/HandsInteraction/Materials/RayMaterial.mat
+  artifactKey: Guid(0b157fd34da92084a8cf68f92d515504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Core/HandsInteraction/Materials/RayMaterial.mat using Guid(0b157fd34da92084a8cf68f92d515504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fada2326d8028530c9031444f10d556b') in 0.013544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Oculus/SampleFramework/Core/TouchControllers/NewTouchControllers/controller_l.fbx
+  artifactKey: Guid(5d44b47caf0eb824bade785d78f776f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Core/TouchControllers/NewTouchControllers/controller_l.fbx using Guid(5d44b47caf0eb824bade785d78f776f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03fcd9976df921c284e8b5347dc70736') in 0.044430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/PropMaterial.mat
+  artifactKey: Guid(38890965fd4d8414facf4aebde878c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/PropMaterial.mat using Guid(38890965fd4d8414facf4aebde878c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2455d1f827ecbf4a4e89c70c14f66a05') in 0.028634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/OculusHand.mat
+  artifactKey: Guid(d641a50c4fe4ee3489a64cf52b76ae79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/OculusHand.mat using Guid(d641a50c4fe4ee3489a64cf52b76ae79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '417b4daa3b1148bc8cf2df1efb187354') in 0.020146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Props/WaterParticles/Materials/ParticleSprayMat.mat
+  artifactKey: Guid(9751ef0d9c1b960409752884ff54a34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Props/WaterParticles/Materials/ParticleSprayMat.mat using Guid(9751ef0d9c1b960409752884ff54a34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebcbfb7fb931c3c09f370af0aedb40c5') in 0.016272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/Materials/OculusTouchForQuestAndRiftS_Material.mat
+  artifactKey: Guid(01ac879f6ce09924e9c26663f798beaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/Materials/OculusTouchForQuestAndRiftS_Material.mat using Guid(01ac879f6ce09924e9c26663f798beaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab5b4b1520085739e0b98abd6d0c4c3') in 0.019368 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Oculus/Interaction/Runtime/Materials/RoundedBoxUnlitZTestAlways.mat
+  artifactKey: Guid(4e13e34972e2e8f45ab47c3281f2655a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Runtime/Materials/RoundedBoxUnlitZTestAlways.mat using Guid(4e13e34972e2e8f45ab47c3281f2655a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c79204d7beddd0b6473945a8a7848a11') in 0.022388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/skybox/Skybox.mat
+  artifactKey: Guid(34b43d94c855d49e491abad836c56a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/skybox/Skybox.mat using Guid(34b43d94c855d49e491abad836c56a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45890294f3862d08e92eb6cf3690b52') in 0.020617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SignGlow.mat
+  artifactKey: Guid(4987a147e31e8044ea7e0762e6f1780a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SignGlow.mat using Guid(4987a147e31e8044ea7e0762e6f1780a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e020445b8708d22b5218be2d70812d8') in 0.013168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Oculus/Interaction/Samples/Objects/Environment/Screen/Materials/ScreenMaterial.mat
+  artifactKey: Guid(e5fb989c2cb62ef468f6537caf5190f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Objects/Environment/Screen/Materials/ScreenMaterial.mat using Guid(e5fb989c2cb62ef468f6537caf5190f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63f70966b6c0e5d4e60ddff68b29ad3') in 0.016694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/SelectionCylinderBase.mat
+  artifactKey: Guid(12d9a49768b575643a552c2ce6fdc26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/SelectionCylinderBase.mat using Guid(12d9a49768b575643a552c2ce6fdc26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '249d4dc904580eb14850d6b61a23eaeb') in 0.015679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/SelectionCylinder.mat
+  artifactKey: Guid(31cce59a5784d22409cb8fc86a99f275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Materials/SelectionCylinder.mat using Guid(31cce59a5784d22409cb8fc86a99f275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b581bff3f683d3fc34b853b771b1f1f') in 0.016044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/Interaction/Samples/Materials/PaperParticle.mat
+  artifactKey: Guid(e616a4eb1b541bc498887ab3e34dfd70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Materials/PaperParticle.mat using Guid(e616a4eb1b541bc498887ab3e34dfd70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7088ffe3504ca4117ab4b8565f81729d') in 0.015643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Oculus/SampleFramework/Core/HandsInteraction/Materials/SkeletonBoneMaterial.mat
+  artifactKey: Guid(abb80e58ce7c0a842a4758d09d9d71e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Core/HandsInteraction/Materials/SkeletonBoneMaterial.mat using Guid(abb80e58ce7c0a842a4758d09d9d71e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8552c3de7a214f055ea55b39b83881e') in 0.013340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SelectivePassthroughHandsSoft.mat
+  artifactKey: Guid(9ac2dd4377e3574419fe3770f75af95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SelectivePassthroughHandsSoft.mat using Guid(9ac2dd4377e3574419fe3770f75af95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46af4415d290f04bff0771f6ffc9510a') in 0.013590 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/sound effects/wood-break-40011.mp3
-  artifactKey: Guid(290dadf71720aa04d8abe123a7ea520a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/sound effects/wood-break-40011.mp3 using Guid(290dadf71720aa04d8abe123a7ea520a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29266f3eef010c957b3b2f35017b6ef') in 0.011626 seconds 
+  path: Assets/Oculus/Voice/Demo/Materials/Shapes.mat
+  artifactKey: Guid(bc0300e976173994a92b5e91881aeaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Voice/Demo/Materials/Shapes.mat using Guid(bc0300e976173994a92b5e91881aeaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1507ea23edf5dc42d2584b12d528dd83') in 0.013325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Oculus/VR/Meshes/OculusTouchForRift/Materials/OculusTouchForRift_Material.mat
+  artifactKey: Guid(eacafe280fdfa6a44845c135057ae6a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/VR/Meshes/OculusTouchForRift/Materials/OculusTouchForRift_Material.mat using Guid(eacafe280fdfa6a44845c135057ae6a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f525116b874b600784daa6cdf936daaa') in 0.012296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/Red.mat
+  artifactKey: Guid(ad051d3b772984b47a4b27afcec8cd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/Red.mat using Guid(ad051d3b772984b47a4b27afcec8cd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0747aa4106bd81218b7dc18509a4125f') in 0.012268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Oculus/LipSync/Models/FemaleHead_Morph/Materials/shirt.mat
+  artifactKey: Guid(0ad01ecbcffbb4c91af7ffa1ebc14f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/LipSync/Models/FemaleHead_Morph/Materials/shirt.mat using Guid(0ad01ecbcffbb4c91af7ffa1ebc14f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ad00f7f13635be557afa0ae46a4013') in 0.012397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Oculus/SampleFramework/Core/HandsInteraction/Materials/PokeMaterial.mat
+  artifactKey: Guid(4f7fe89ad7fd14a4a9a5ebc776621cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Core/HandsInteraction/Materials/PokeMaterial.mat using Guid(4f7fe89ad7fd14a4a9a5ebc776621cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a687a75800846b63242162c9dea63873') in 0.012935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/Interaction/Runtime/Materials/OculusHandWire.mat
+  artifactKey: Guid(697d9a99ae3c7784bbef700ed300a1ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Runtime/Materials/OculusHandWire.mat using Guid(697d9a99ae3c7784bbef700ed300a1ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db09d14fc23795ed3e8560eac59a4fb') in 0.014721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Oculus/LipSync/Models/FemaleHead_Morph/Materials/outerEyeShell.mat
+  artifactKey: Guid(76f25b997543f432bbe00737485b392e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/LipSync/Models/FemaleHead_Morph/Materials/outerEyeShell.mat using Guid(76f25b997543f432bbe00737485b392e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cc93055e818db1328513cab090be831') in 0.015595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Oculus/Interaction/Runtime/Materials/OculusHandDebug.mat
+  artifactKey: Guid(955dc62c6d15d7940a00920925eab81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Runtime/Materials/OculusHandDebug.mat using Guid(955dc62c6d15d7940a00920925eab81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd96dd13e0fa2262b839df455469d15a8') in 0.013027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Oculus/Interaction/Runtime/Materials/OculusHandPinchMaterial.mat
+  artifactKey: Guid(861c253c01be7f7489f64e9ac001a10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Runtime/Materials/OculusHandPinchMaterial.mat using Guid(861c253c01be7f7489f64e9ac001a10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a6d6861dd6a6a21e26679d7e1d5d040') in 0.012225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Oculus/SampleFramework/Core/TouchControllers/Materials/R_controller_DIF.mat
+  artifactKey: Guid(7842888294a7e0e4ea4d15e9f8eb2650) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Core/TouchControllers/Materials/R_controller_DIF.mat using Guid(7842888294a7e0e4ea4d15e9f8eb2650) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ead04d345638965e44cd5c5515e60bb2') in 0.012925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SelectivePassthroughSoft.mat
+  artifactKey: Guid(ddbf76a20fa22a14a83e42283bde1eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SelectivePassthroughSoft.mat using Guid(ddbf76a20fa22a14a83e42283bde1eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a15ccfaef378253d63f011827577914') in 0.014877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Oculus/Interaction/Runtime/Materials/OculusHandCursor.mat
+  artifactKey: Guid(882d323910ef3bf4c88fb92c491a5ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Runtime/Materials/OculusHandCursor.mat using Guid(882d323910ef3bf4c88fb92c491a5ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0806258c0e0fd5a662ddf302be07ca5e') in 0.013024 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Oculus/Interaction/Samples/Materials/ScissorsParticle.mat
+  artifactKey: Guid(f934f6827b1ed7947bc334bd556ecf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Samples/Materials/ScissorsParticle.mat using Guid(f934f6827b1ed7947bc334bd556ecf5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ecfad904e9b88f3611fac15f3bcfc6') in 0.015661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Oculus/Interaction/Runtime/Materials/RoundedBoxUnlit.mat
+  artifactKey: Guid(d9665615562752448b5140038771d26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/Interaction/Runtime/Materials/RoundedBoxUnlit.mat using Guid(d9665615562752448b5140038771d26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93f8e448466113d41df6ac2e9f536e3') in 0.013025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/VR/Meshes/OculusTouchForQuest2/Materials/OculusTouchForQuest2_MAT.mat
+  artifactKey: Guid(d7292a5e1ae17a64c95f3081d2c6be5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/VR/Meshes/OculusTouchForQuest2/Materials/OculusTouchForQuest2_MAT.mat using Guid(d7292a5e1ae17a64c95f3081d2c6be5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d530e47780990f90c97897d96767b95') in 0.018410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SelectivePassthrough.mat
+  artifactKey: Guid(f7f0c9cf841119946914d0d30670867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/SelectivePassthrough.mat using Guid(f7f0c9cf841119946914d0d30670867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af2ab62d556beb98b3ddc7fff9d499e1') in 0.021573 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
