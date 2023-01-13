@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -17,6 +18,11 @@ public class Health : MonoBehaviour
     private float currentHealth = 100;
     private PlayerController controllerScript;//the main controller of the player thats linked to the game controller
 
+
+    //sergiu audio implementation
+
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
     /// <summary>
     /// Sets the start settings
     /// </summary>
@@ -64,7 +70,9 @@ public class Health : MonoBehaviour
         {
             if(currentHealth - amount > 0)
             {
-                currentHealth -= amount;
+                source.PlayOneShot(clip);
+              
+                    currentHealth -= amount;
             }
             else//if the played doesnt have enough health
             {
