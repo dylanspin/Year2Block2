@@ -294,7 +294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lost
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75c80e7b16f53e54eb766951fc7d37fc, type: 2}
   m_sharedMaterial: {fileID: 6784588602626400791, guid: 75c80e7b16f53e54eb766951fc7d37fc,
@@ -820,6 +820,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthRegen: 5
+  source: {fileID: 0}
+  clip: {fileID: 8300000, guid: e1cdb3db9902506479fa9c3706fc45ea, type: 3}
 --- !u!114 &898381542479944394
 MonoBehaviour:
   m_ObjectHideFlags: 0

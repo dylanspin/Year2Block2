@@ -37,7 +37,13 @@ public class Door : MonoBehaviour
 
     [Header("Components")]
 
+    [Tooltip("The Script that controlls the audio of the door when hit")]
+    [SerializeField] private DoorBreaking doorSoundScript;
+
+    [Tooltip("The hinge points of the door are held in this list to check if all the hinges are broken")]
     [SerializeField] private List<GameObject> hingePoints;
+
+    [Tooltip("All the individual pieces of the door")]
     [SerializeField] private DoorPiece[] allPoints;
 
     [Header("Private data")]
@@ -50,7 +56,6 @@ public class Door : MonoBehaviour
     /// </summary>
     private void Start()
     {
-
         for(int i=0; i<allPoints.Length; i++)
         {
             allPoints[i].StartCheck(breakingVel);
@@ -143,6 +148,11 @@ public class Door : MonoBehaviour
                     allPoints[i].checkEmpty(player);
                 }
             }
+        }
+
+        if(doorSoundScript)
+        {
+            doorSoundScript.playSoundEffect();
         }
     }
 }

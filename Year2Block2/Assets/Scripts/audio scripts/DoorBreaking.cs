@@ -4,43 +4,23 @@ using UnityEngine;
 
 public class DoorBreaking : MonoBehaviour
 {
-    [SerializeField] public AudioSource source;
-    [SerializeField] public AudioClip clip;
+    [Header("Components")]
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
 
+    [Header("Private data")]
     private bool hasPlayed = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public void playSoundEffect()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-     void OnTriggerEnter(Collider other)
-     {
-      
-
-        if (other.gameObject.tag == "Grabbable")
+        if (!hasPlayed)
         {
-
-            if (!hasPlayed)
-            {
-                source.PlayOneShot(clip);
-                hasPlayed = true;
-            }
-            else
-            {
-                hasPlayed= false;   
-            }
-
-
-            Debug.Log("Success!");
-         }
-     }
+            source.PlayOneShot(clip);
+            hasPlayed = true;
+        }
+        else
+        {
+            hasPlayed= false;   
+        }
+    }
 }

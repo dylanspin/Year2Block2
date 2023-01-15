@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5494041433453808796}
   - component: {fileID: 5494041433453808771}
-  - component: {fileID: 1677375281}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rescue - doll
   m_TagString: Doll
   m_Icon: {fileID: 0}
@@ -50,47 +49,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1677375281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5494041433453808797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f46ea1dbdb59f4dbe0322abe176aa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testmat:
-  - {fileID: 2100000, guid: 91b6c82de3d03654ab351ed2ab858dcf, type: 2}
-  - {fileID: 2100000, guid: b2533edfc19f209479d93578f22d568d, type: 2}
-  testRender:
-  - {fileID: 3444508424951097182}
-  - {fileID: 7630058284743258724}
-  - {fileID: 7263392740077210477}
-  - {fileID: 3415286499057474826}
-  - {fileID: 4212826154450521949}
-  - {fileID: 8706011661535444665}
-  - {fileID: 9178649838853287216}
-  - {fileID: 8751456515407674439}
-  - {fileID: 7085165098159075864}
-  - {fileID: 1826415768883723413}
-  - {fileID: 5465247063238631809}
-  - {fileID: 6610592811364084603}
-  - {fileID: 5117441511183519093}
-  - {fileID: 1366961031709497123}
-  - {fileID: 3370864239129475049}
-  - {fileID: 3423765635732731137}
-  - {fileID: 7996924332370845499}
-  - {fileID: 5210865602101364041}
-  - {fileID: 3711009437278544370}
-  - {fileID: 3231570394139547007}
-  - {fileID: 149563408615575210}
-  - {fileID: 579741631522585739}
-  - {fileID: 963803669608018743}
-  noCollisionLayer: Doll
-  collisionLayer: Default
 --- !u!1001 &5494041433435099521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,6 +56,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5494041433453808796}
     m_Modifications:
+    - target: {fileID: -8836131785757309582, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_RootOrder
@@ -158,21 +121,51 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: -6497991412393755779, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -6272950618053584148, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 663606227d298fa4e863c3df01ac5461, type: 2}
+    - target: {fileID: -6044332871493957848, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5943436831634473731, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5910842947866439545, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -5877952272483671143, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: -5568371526223589888, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -5521451664992191311, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 663606227d298fa4e863c3df01ac5461, type: 2}
+    - target: {fileID: -5472134077505449767, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -5409044249249894600, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -183,21 +176,71 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: -4523382268772114574, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -4512923726675090762, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: -3713614576196595046, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3215555783603854218, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -3069630975373660908, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 663606227d298fa4e863c3df01ac5461, type: 2}
+    - target: {fileID: -2719067658020963929, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2699038808534903772, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -2036355838043184000, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 663606227d298fa4e863c3df01ac5461, type: 2}
+    - target: {fileID: -1790252271704663398, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -351551959497132656, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 85458291657071686, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 149244849691453733, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 254396905329135150, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 319323719222727880, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -208,16 +251,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: 902280105040892459, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Name
       value: dummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1694280004616469242, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: 1814021346422682018, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2505138136368615098, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -228,11 +286,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: 3753069248500364505, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174027643622792185, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4914947139660279050, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
+    - target: {fileID: 5362153131847314233, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439118236399561549, guid: 7843254463696b64aae6836ce584eef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5633328804727414571, guid: 7843254463696b64aae6836ce584eef3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -275,12 +353,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fe7f0c9d941001a44869a466bb74e252, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7843254463696b64aae6836ce584eef3, type: 3}
---- !u!23 &149563408615575210 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5633328804727414571, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456253681045387960 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5362153131847314233, guid: 7843254463696b64aae6836ce584eef3,
@@ -455,7 +527,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -470,7 +542,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -485,7 +557,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -500,7 +572,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -750,7 +822,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -765,7 +837,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -780,7 +852,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -795,7 +867,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -871,12 +943,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &579741631522585739 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4914947139660279050, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &938849175907651315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4523382268772114574, guid: 7843254463696b64aae6836ce584eef3,
@@ -1051,7 +1117,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1066,7 +1132,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1081,7 +1147,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1096,7 +1162,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1172,18 +1238,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &963803669608018743 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -4512923726675090762, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1366961031709497123 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6829333093618665122, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1620503995187816486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2719067658020963929, guid: 7843254463696b64aae6836ce584eef3,
@@ -1358,7 +1412,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1373,7 +1427,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1388,7 +1442,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1403,7 +1457,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1653,7 +1707,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1668,7 +1722,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1683,7 +1737,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1698,7 +1752,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1774,12 +1828,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &1826415768883723413 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -3069630975373660908, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2260469042097403383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3215555783603854218, guid: 7843254463696b64aae6836ce584eef3,
@@ -1956,7 +2004,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -1971,7 +2019,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -1986,7 +2034,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2001,7 +2049,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -2251,7 +2299,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2266,7 +2314,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -2281,7 +2329,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2296,7 +2344,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -2372,42 +2420,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &3231570394139547007 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6982296541028812030, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &3370864239129475049 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7131862022971221608, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &3415286499057474826 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7159396756070812811, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &3423765635732731137 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -2036355838043184000, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &3444508424951097182 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7202271454713460447, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &3711009437278544370 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 9205048644811714675, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3972677115341038609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -351551959497132656, guid: 7843254463696b64aae6836ce584eef3,
@@ -2582,7 +2594,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2597,7 +2609,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -2612,7 +2624,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2627,7 +2639,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -2703,12 +2715,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &4212826154450521949 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8523122227062955740, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4664404760561976234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 902280105040892459, guid: 7843254463696b64aae6836ce584eef3,
@@ -2729,27 +2735,170 @@ CapsuleCollider:
   m_Height: 0.002790393
   m_Direction: 1
   m_Center: {x: 2.910383e-11, y: 4.656613e-10, z: 0.00060979556}
---- !u!23 &5117441511183519093 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -8414399330726454028, guid: 7843254463696b64aae6836ce584eef3,
+--- !u!1 &4683647142418476240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7843254463696b64aae6836ce584eef3,
     type: 3}
   m_PrefabInstance: {fileID: 5494041433435099521}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &5210865602101364041 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 319323719222727880, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
+--- !u!136 &1414440957
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683647142418476240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.2845721
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.64228606, z: 0}
+--- !u!82 &1414440959
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683647142418476240}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 20a0020ed24474a46abb8bf8086bbe54, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.616
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.14847183
+      value: 0
+      inSlope: -7.815635
+      outSlope: -7.815635
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.26781315
+      value: 0.48060608
+      inSlope: -1.6192648
+      outSlope: -1.6192648
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.32163703
+      value: 0.707592
+      inSlope: -0.36710376
+      outSlope: -0.36710376
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5693883
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4642465
+      value: 0.9841995
+      inSlope: -0.1221193
+      outSlope: -0.1221193
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.644649
+      value: 0.48887634
+      inSlope: -0.030529825
+      outSlope: -0.030529825
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.86133474
+      value: 0.038589478
+      inSlope: -0.0076324563
+      outSlope: -0.0076324563
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.002000801
+      outSlope: -0.002000801
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &5455118013517805162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &5465247063238631809 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 569341054864109568, guid: 7843254463696b64aae6836ce584eef3,
     type: 3}
   m_PrefabInstance: {fileID: 5494041433435099521}
   m_PrefabAsset: {fileID: 0}
@@ -2927,7 +3076,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2942,7 +3091,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -2957,7 +3106,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -2972,7 +3121,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3067,12 +3216,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0021764296, y: 0.0024471325, z: 0.0017236788}
   m_Center: {x: 0.00007826862, y: -0.00013046601, z: 3.8881593e-12}
---- !u!23 &6610592811364084603 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1694280004616469242, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6926807617948849833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6044332871493957848, guid: 7843254463696b64aae6836ce584eef3,
@@ -3247,7 +3390,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -3262,7 +3405,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3277,7 +3420,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -3292,7 +3435,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3542,7 +3685,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -3557,7 +3700,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3572,7 +3715,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -3587,7 +3730,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3837,7 +3980,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -3852,7 +3995,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3867,7 +4010,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -3882,7 +4025,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -3958,24 +4101,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &7085165098159075864 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5877952272483671143, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7263392740077210477 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -6272950618053584148, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7630058284743258724 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2728521696075621349, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7632685130730334972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6497991412393755779, guid: 7843254463696b64aae6836ce584eef3,
@@ -4137,7 +4262,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -4152,7 +4277,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -4167,7 +4292,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -4182,7 +4307,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -4258,12 +4383,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &7996924332370845499 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2505138136368615098, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8490377756111096440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4174027643622792185, guid: 7843254463696b64aae6836ce584eef3,
@@ -4440,7 +4559,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -4455,7 +4574,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -4470,7 +4589,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -4485,7 +4604,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -4735,7 +4854,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -4750,7 +4869,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -4765,7 +4884,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: grabDoll
         m_Mode: 1
@@ -4780,7 +4899,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677375281}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Doll, Assembly-CSharp
         m_MethodName: letGoDoll
         m_Mode: 1
@@ -4856,18 +4975,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!23 &8706011661535444665 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5409044249249894600, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &8751456515407674439 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5382458210897908282, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9117513300499128193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 7843254463696b64aae6836ce584eef3,
@@ -4887,9 +4994,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0015531849, y: 0.0022281867, z: 0.0009799425}
   m_Center: {x: 0, y: -1.6947194e-19, z: 0.0002152647}
---- !u!23 &9178649838853287216 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5521451664992191311, guid: 7843254463696b64aae6836ce584eef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5494041433435099521}
-  m_PrefabAsset: {fileID: 0}

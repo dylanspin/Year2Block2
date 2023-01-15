@@ -399,6 +399,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 91b6c82de3d03654ab351ed2ab858dcf, type: 2}
   - {fileID: 2100000, guid: b2533edfc19f209479d93578f22d568d, type: 2}
   objectRb: {fileID: 5131870639407365736}
+  grabPointAnim: {fileID: 766588265052151870}
+  secondGrabPoint: {fileID: 5131870639070049030}
 --- !u!1 &5131870639612317345
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5131870640565565384}
   - component: {fileID: 5131870640565565385}
+  - component: {fileID: 766588265052151870}
   m_Layer: 7
   m_Name: GrabPoint-1
   m_TagString: Untagged
@@ -520,6 +523,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.05, z: 0.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &766588265052151870
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131870640565565383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d7dc54ab758ac042a657cbcdc6d196d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5131870640932487351
 GameObject:
   m_ObjectHideFlags: 0

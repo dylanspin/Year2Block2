@@ -7,6 +7,8 @@ public class ItemHold : MonoBehaviour
     [SerializeField] private MeshRenderer testMesh;
     [SerializeField] private Material[] testMat;
     [SerializeField] private Rigidbody objectRb;
+    [SerializeField] private Animator grabPointAnim;
+    [SerializeField] private GameObject secondGrabPoint;
 
     private List<Holder> inTriggerList = new List<Holder>();
     private Holder holderScript = null;
@@ -17,9 +19,9 @@ public class ItemHold : MonoBehaviour
     /// </summary>
     public void setStartGrab(Holder startScript)
     {
-        grabbed = true;
         holderScript = startScript;
         holderScript.setHold(true);
+        setGrabCollider(false);
         setHold(true);
     }
 
@@ -30,7 +32,8 @@ public class ItemHold : MonoBehaviour
     {
         grabbed = active;
         // testingGrab(grabbed);
-        
+        setGrabCollider(active);
+
         if(!active)
         {
             Holder closedPos = getClosed();
@@ -51,6 +54,20 @@ public class ItemHold : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes the size of the grab collider of the axe so it can be grabbed from any point
+    /// </summary>
+    private void setGrabCollider(bool active)
+    {
+        if(grabPointAnim)
+        {
+            if(secondGrabPoint)
+            {
+                secondGrabPoint.SetActive(active);
+            }
+            grabPointAnim.SetBool("Grabbed",active);
+        }
+    }
 
     /// <summary>
     /// Changes the materials to indicate if its grabbed or not
@@ -68,7 +85,6 @@ public class ItemHold : MonoBehaviour
         if(active)
         {
             objectRb.constraints = RigidbodyConstraints.FreezeAll;
-            
             Transform holdTrans = holderScript.getSetTrans();
             transform.position = holdTrans.position;
             transform.eulerAngles = holdTrans.eulerAngles;
@@ -120,6 +136,12 @@ public class ItemHold : MonoBehaviour
         }
         
         return closedPos;
+    }
+
+
+    public bool getIsHeld()
+    {
+        return grabbed;
     }
 
 }

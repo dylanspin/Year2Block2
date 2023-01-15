@@ -20,25 +20,34 @@ public class endEffect : MonoBehaviour
     [SerializeField] private string[] endText = {"Passed","Lost"};
 
     [Header("Private data")]
-    private bool passed = false;
+    private int loadScene;
 
+    /// <summary>
+    /// Called when the game is either lost or won then it shows the transition
+    /// </summary>
+    public void loadGameTransition()
+    {
+        loadScene = 1;
+        anim.SetBool("Show",true);
+        Invoke("animationTrigger",1.5f);
+    }
+    
+    /// <summary>
+    /// Called when the game is either lost or won then it shows the transition
+    /// </summary>
     public void setState(bool win)
     {
-        passed = win;
+        loadScene = win ? 0 : SceneManager.GetActiveScene().buildIndex;
         anim.SetBool("Show",true);
         textDisplay.text = win ? endText[0] : endText[1];
         Invoke("animationTrigger",2.3f);
     }
 
+    /// <summary>
+    /// Loads the set scene after the transition animation
+    /// </summary>
     private void animationTrigger()
     {
-        if(passed)
-        {
-            SceneManager.LoadScene(1);
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        SceneManager.LoadScene(loadScene);//loads the main scene again
     }
 }
