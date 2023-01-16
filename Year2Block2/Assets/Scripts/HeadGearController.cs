@@ -40,13 +40,15 @@ public class HeadGearController : MonoBehaviour
     private bool aButtonDown = false;
     private bool bButtonDown = false;
     private float defaultLight = 0.2f;
+    private GameEffectController mainEffectController;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    private void Start()
+    public void setStart(GameEffectController effectController)
     {
+        mainEffectController = effectController;
         defaultLight = RenderSettings.ambientIntensity;
         setSkyBox(0);
     }
@@ -68,8 +70,8 @@ public class HeadGearController : MonoBehaviour
                 aButtonDown = true;
                 checkProfile(nightVision);
                 setSkyBox(nightLight);
+                mainEffectController.setVision(0);
             }
-            // if start pressing, trigger event
         }
         else
         {
@@ -83,8 +85,8 @@ public class HeadGearController : MonoBehaviour
                 bButtonDown = true;
                 checkProfile(thermalVision);
                 setSkyBox(thermalLight);
+                mainEffectController.setVision(1);
             }
-            // if start pressing, trigger event
         }
         else
         {
@@ -97,6 +99,7 @@ public class HeadGearController : MonoBehaviour
         if(postVolume.profile == newProfile)
         {
             postVolume.profile = normalVision;
+            mainEffectController.setVision(0);
         }
         else
         {

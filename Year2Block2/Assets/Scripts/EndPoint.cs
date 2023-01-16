@@ -20,20 +20,17 @@ public class EndPoint : MonoBehaviour
     [Tooltip("The text that displayes how many people have been Rescued")]
     [SerializeField] private TMPro.TextMeshProUGUI count;
 
-    [Header("Components")]
-
-    [Tooltip("The text that displayes how many people have been Rescued")]
-    [SerializeField] private List<GameObject> inMapPeople = new List<GameObject>();
-
     [Header("Private Data")]
-    private List<GameObject> people = new List<GameObject>();
+    private List<Doll> inMap = new List<Doll>();
+    private List<Doll> people = new List<Doll>();
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    private void Start()
+    public void setStartData(List<Doll> setPeople)
     {
+        inMap = setPeople;
         setText();
     }
 
@@ -47,12 +44,14 @@ public class EndPoint : MonoBehaviour
 
         if(rootObj.tag == triggerTag)//if it is a people/doll
         {
-            if(!people.Contains(rootObj))//if not already resqued
+            Doll dollScript = rootObj.GetComponent<Doll>();
+
+            if(!people.Contains(dollScript))//if not already resqued
             {
-                people.Add(rootObj);
+                people.Add(dollScript);
                 setText();
 
-                if(people.Count >= inMapPeople.Count)//if all people are resqued 
+                if(people.Count >= inMap.Count)//if all people are resqued 
                 {
                     controllerScript.setEnd(true);
                 }
@@ -65,6 +64,6 @@ public class EndPoint : MonoBehaviour
     /// </summary>
     private void setText()
     {
-        count.text = people.Count + " Out Of " + inMapPeople.Count + " Rescued";
+        count.text = people.Count + " Out Of " + inMap.Count + " Rescued";
     }
 }

@@ -33,12 +33,15 @@ public class CheckHelm : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, triggerDistance,checkLayers);//cast sphere cast
         if(hitColliders.Length > 0)//if it collided with something that means the stop is in the cast
         {
-            if(hitColliders[0].transform.parent.gameObject.tag == "Helmet")
+            for(int i=0; i<hitColliders.Length; i++)
             {
-                bool grabbed = hitColliders[0].transform.parent.GetComponent<ItemHold>().getIsHeld();
-                if(grabbed)
+                if(hitColliders[0].transform.parent.gameObject.tag == "Helmet")
                 {
-                    endScript.loadGameTransition();
+                    bool grabbed = hitColliders[0].transform.parent.GetComponent<ItemHold>().getIsHeld();
+                    if(grabbed)
+                    {
+                        endScript.loadGameTransition();
+                    }
                 }
             }
         }

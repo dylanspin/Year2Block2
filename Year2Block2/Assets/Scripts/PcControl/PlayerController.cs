@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The script that controlls the health of the player")]
     [SerializeField] private Health healthScript;
 
+    [Tooltip("The script that different visions")]
+    [SerializeField] private HeadGearController visionController;
+
     [Tooltip("The script that allows looking around with pc controlls")]
     [SerializeField] private Look lookScript;
 
@@ -31,6 +34,11 @@ public class PlayerController : MonoBehaviour
         }
         transitionController.gameObject.SetActive(true);
         setStart();
+    }
+
+    public void setScripts(GameEffectController effectController)
+    {
+        visionController.setStart(effectController);
     }
 
     /// <summary>
@@ -57,5 +65,13 @@ public class PlayerController : MonoBehaviour
     public void lostGame()
     {
         controllerScript.setEnd(false);
+    }
+
+    /// <summary>
+    /// When the player loses health
+    /// </summary>  
+    public void dealDamage(float amount)
+    {
+        healthScript.loseHealth(amount);
     }
 }
