@@ -27648,7 +27648,7 @@ MonoBehaviour:
   - {fileID: 616708142}
   - {fileID: 603852873}
   damagePerSec: 15
-  timeNextupdate: 0.5
+  timeNextupdate: 0.3
   spreadRequired: 10
   startSpread: 1
 --- !u!1001 &1931504501
