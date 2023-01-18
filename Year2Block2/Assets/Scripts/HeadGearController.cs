@@ -83,9 +83,9 @@ public class HeadGearController : MonoBehaviour
             if(!bButtonDown)
             {
                 bButtonDown = true;
+                mainEffectController.setVision(1);
                 checkProfile(thermalVision);
                 setSkyBox(thermalLight);
-                mainEffectController.setVision(1);
             }
         }
         else

@@ -6,8 +6,12 @@ public class GameEffectController : MonoBehaviour
 {
     [Header("Fire settings")]
 
-    [Tooltip("All the fire particle systems in the scene used for changing the settings when the thermal vision is on")]
-    [SerializeField] private ParticleSystem[] fires;
+    [Tooltip("Script that controlls all the fire in the scene")]
+    [SerializeField] private FireController fireScript;
+
+    [SerializeField] private float[] emesionAmounts = {15,2};
+
+    [Header("Rescue dolls settings")]
 
     [Tooltip("All the fire particle systems in the scene used for changing the settings when the thermal vision is on")]
     [SerializeField] private List<Doll> dols = new List<Doll>();
@@ -18,6 +22,8 @@ public class GameEffectController : MonoBehaviour
         {
             dols[i].setMat(visionId);
         }
+
+        fireScript.downFire(emesionAmounts[visionId]);
     }
 
 

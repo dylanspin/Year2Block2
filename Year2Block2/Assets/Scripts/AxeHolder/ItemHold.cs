@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class ItemHold : MonoBehaviour
 {
+    [Header("Scripts")]
+
+    [SerializeField] endEffect endEffect;
+ 
+    [Header("Components")]
+
     [SerializeField] private MeshRenderer testMesh;
     [SerializeField] private Material[] testMat;
     [SerializeField] private Rigidbody objectRb;
     [SerializeField] private Animator grabPointAnim;
     [SerializeField] private GameObject secondGrabPoint;
 
+    [Header("Private data")]
     private List<Holder> inTriggerList = new List<Holder>();
     private Holder holderScript = null;
     private bool grabbed = false;
@@ -34,22 +41,25 @@ public class ItemHold : MonoBehaviour
         // testingGrab(grabbed);
         setGrabCollider(active);
 
-        if(!active)
+        if(active)//when grabbed
+        {
+            checkScripts();
+            
+            if(holderScript)
+            {
+                holderScript.setHold(false);
+                setHold(false);
+            }
+        }
+        else//when let go
         {
             Holder closedPos = getClosed();
+
             if(closedPos != null)
             {
                 holderScript = closedPos;
                 holderScript.setHold(true);
                 setHold(true);
-            }
-        }
-        else
-        {
-            if(holderScript)
-            {
-                holderScript.setHold(false);
-                setHold(false);
             }
         }
     }
@@ -138,10 +148,11 @@ public class ItemHold : MonoBehaviour
         return closedPos;
     }
 
-
-    public bool getIsHeld()
+    private void checkScripts()
     {
-        return grabbed;
+        if(endEffect)
+        {
+            endEffect.loadGameTransition();
+        }
     }
-
 }

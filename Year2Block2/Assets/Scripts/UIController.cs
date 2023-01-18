@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [Header("Components")]
+    [SerializeField] Slider healthSlider;
+
     private void Start()
     {
         if(Application.isEditor)
@@ -12,5 +15,18 @@ public class UIController : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+
+
+    public void setMaxHealth(float newMax)
+    {
+        healthSlider.maxValue = newMax;
+        healthSlider.value = newMax;
+    }
+
+    public void setHealth(float value)
+    {
+        healthSlider.value = value;
     }
 }

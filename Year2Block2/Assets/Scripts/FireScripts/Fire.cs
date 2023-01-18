@@ -6,9 +6,12 @@ public class Fire : MonoBehaviour
 {
     
     [Header("Components")]
-    
+
     [Tooltip("The fire particle system")]
     [SerializeField] private ParticleSystem fireParticle;
+    
+    [Tooltip("The fire particle system")]
+    [SerializeField] private GameObject triggerObject;
 
     [Tooltip("The fire sound effect emiter")]
     [SerializeField] private AudioSource fireSound;
@@ -63,6 +66,7 @@ public class Fire : MonoBehaviour
 
         if(spreadAmount > 0)
         {
+            spreadCount = 1;//resets the count
             int randomFire = Random.Range(0,spreadOptions.Count);
 
             if(!spreadOptions[randomFire].isOnFire())
@@ -103,14 +107,34 @@ public class Fire : MonoBehaviour
     {
         if(active)
         {
+            CancelInvoke("disableFireParticle");
+            triggerObject.SetActive(true);
+            fireParticle.gameObject.SetActive(true);
             fireSound.Play();
             fireParticle.Play();
         }
         else
         {
+            Invoke("disableFireParticle",1);
+            CancelInvoke("disableFireParticle");
+            triggerObject.SetActive(false);
             fireSound.Stop();
             fireParticle.Stop();
         }
+    }
+
+    /// <summary>
+    /// Turns of the particle system object for performance after 1 sec so the particle system can die out
+    /// </summary>
+    private void disableFireParticle()
+    {
+        fireParticle.gameObject.SetActive(false);
+    }
+
+    public void setParticle(float newAmount)
+    {
+        var emission = fireParticle.emission;
+        emission.rateOverTime = newAmount;
     }
 
     //get value functions

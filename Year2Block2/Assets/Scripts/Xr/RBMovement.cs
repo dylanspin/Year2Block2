@@ -76,7 +76,7 @@ public class RBMovement : MonoBehaviour
         Quaternion headDir = Quaternion.Euler(0,playerHead.Camera.transform.eulerAngles.y,0);
         movementPlayer = headDir * new Vector3(inputAxis.x, 0f, inputAxis.y);
 
-        movementPlayer = movementPlayer * currentSpeed * speedMultiplier * Time.fixedDeltaTime;
+        movementPlayer = movementPlayer * currentSpeed * speedMultiplier * Time.deltaTime;
 
         rbPlayer.velocity = new Vector3(movementPlayer.x ,rbPlayer.velocity.y, movementPlayer.z);
     }

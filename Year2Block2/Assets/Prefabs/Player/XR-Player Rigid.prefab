@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputSource: 4
-  speedMultiplier: 100
+  speedMultiplier: 80
   walkingSpeed: 3
   runningSpeed: 5
   extraHeight: 0.2
@@ -766,6 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionController: {fileID: 405544588}
+  visionController: {fileID: 898381542479944387}
   healthScript: {fileID: 898381542479944393}
   lookScript: {fileID: 898381541552348268}
   controllerScript: {fileID: 0}
@@ -819,8 +820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthRegen: 5
-  source: {fileID: 0}
+  healthRegen: 2
+  source: {fileID: 898381541552348270}
   clip: {fileID: 8300000, guid: e1cdb3db9902506479fa9c3706fc45ea, type: 3}
 --- !u!114 &898381542479944394
 MonoBehaviour:
@@ -834,6 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce4bd48aead9d64a953be9e7555717c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
 --- !u!1 &2023195015212343690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,7 +1406,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4095
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

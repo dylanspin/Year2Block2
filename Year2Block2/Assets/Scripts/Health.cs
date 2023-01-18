@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     private bool dead = false;
     private float currentHealth = 100;
     private PlayerController controllerScript;//the main controller of the player thats linked to the game controller
+    private UIController uiScript;
 
     //sergiu audio implementation
     [SerializeField] private AudioSource source;
@@ -24,10 +25,13 @@ public class Health : MonoBehaviour
     /// <summary>
     /// Sets the start settings
     /// </summary>
-    public void setStart(PlayerController newController)
+    public void setStart(PlayerController newController,UIController newUi)
     {
         controllerScript = newController;
+        uiScript = newUi;
         currentHealth = maxHealth;
+        
+        newUi.setMaxHealth(maxHealth);
     }
 
     /// <summary>
@@ -56,6 +60,8 @@ public class Health : MonoBehaviour
             {
                 currentHealth = maxHealth;
             }
+
+            uiScript.setHealth(currentHealth);
         }
     }
 
@@ -68,7 +74,12 @@ public class Health : MonoBehaviour
         {
             if(currentHealth - amount > 0)
             {
-                source.PlayOneShot(clip);
+                if(!source.isPlaying)
+                {
+                    source.clip = clip;
+                    source.Play();
+                }
+
                 currentHealth -= amount;
             }
             else//if the played doesnt have enough health
@@ -77,6 +88,7 @@ public class Health : MonoBehaviour
                 currentHealth = 0;
                 controllerScript.lostGame();
             }
+            uiScript.setHealth(currentHealth);
         }
     }
 }

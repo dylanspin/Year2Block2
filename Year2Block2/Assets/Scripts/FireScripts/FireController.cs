@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class FireController : MonoBehaviour
 {
-    [Header("Components")]
-
-    [Tooltip("All columns in the grid holding fire cells")]
-    [SerializeField] private List<ColumnManager> allColums = new List<ColumnManager>();
-
     [Header("Settings")]
 
     [Tooltip("Damage per second")]
@@ -78,7 +73,7 @@ public class FireController : MonoBehaviour
         if(inTrigger > 0)
         {
             float amount = damagePerSec * Time.deltaTime;
-            player.dealDamage(damagePerSec);
+            player.dealDamage(amount);
         }
     }
 
@@ -106,9 +101,11 @@ public class FireController : MonoBehaviour
     /// </summary>
     public void setAllFires()
     {
-        for(int i=0; i<allColums.Count; i++)
+        int colums = transform.childCount;
+
+        for(int i=0; i<colums; i++)
         {
-            allColums[i].setStart(this);
+            transform.GetChild(i).GetComponent<ColumnManager>().setStart(this);
         }
     }
 
@@ -120,4 +117,12 @@ public class FireController : MonoBehaviour
             allFires.Add(added);
         }
     }   
+
+    public void downFire(float emitionAmount)
+    {
+        for(int i=0; i<allFires.Count; i++)
+        {
+            allFires[i].setParticle(emitionAmount);
+        }
+    }
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class FireDamage : MonoBehaviour
 {
+    [Header("Components")]
+
+    [Tooltip("The fire script of this cell")]
+    [SerializeField] private Fire fireScript;
+
     [Header("Options")]
 
     [SerializeField] private string playerTag = "Player";
@@ -11,6 +16,7 @@ public class FireDamage : MonoBehaviour
     [Header("Private data")]
 
     private FireController controllerScript;
+    private bool intrigger = false;
 
     private void Start()
     {
@@ -22,7 +28,14 @@ public class FireDamage : MonoBehaviour
     /// </summary>
     private void OnTriggerEnter(Collider other)
     {
-        controllerScript.setIntrigger(true);
+        if(other.transform.root.tag == "Player")
+        {
+            if(fireScript.isOnFire())
+            {
+                intrigger = true;
+                controllerScript.setIntrigger(true);
+            }
+        }   
     }
 
     /// <summary>
@@ -30,6 +43,12 @@ public class FireDamage : MonoBehaviour
     /// </summary>
     private void OnTriggerExit(Collider other)
     {
-        controllerScript.setIntrigger(false);
+        if(other.transform.root.tag == "Player")
+        {
+            if(intrigger)
+            {
+                controllerScript.setIntrigger(false);
+            }
+        }
     }
 }

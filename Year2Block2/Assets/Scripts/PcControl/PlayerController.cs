@@ -9,19 +9,23 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Script that controlls the transition effects")]
     [SerializeField] private endEffect transitionController;
 
+    [Tooltip("Script that controlls the transition effects")]
+    [SerializeField] private HeadGearController visionController;
+
     [Header("Scripts")]
 
     [Tooltip("The script that controlls the health of the player")]
     [SerializeField] private Health healthScript;
-
-    [Tooltip("The script that different visions")]
-    [SerializeField] private HeadGearController visionController;
 
     [Tooltip("The script that allows looking around with pc controlls")]
     [SerializeField] private Look lookScript;
 
     [Tooltip("The script that controlls the whole scene")]
     [SerializeField] private GameController controllerScript;
+
+    [Header("Private data")]
+
+    private UIController uiScript;
 
     /// <summary>
     /// Sets the start information of scritps
@@ -36,9 +40,10 @@ public class PlayerController : MonoBehaviour
         setStart();
     }
 
-    public void setScripts(GameEffectController effectController)
+    public void setScripts(GameEffectController effectController,UIController newUI)
     {
         visionController.setStart(effectController);
+        uiScript = newUI;
     }
 
     /// <summary>
@@ -55,7 +60,7 @@ public class PlayerController : MonoBehaviour
         
         if(healthScript)
         {
-            healthScript.setStart(this);
+            healthScript.setStart(this,uiScript);
         }
     }
 
