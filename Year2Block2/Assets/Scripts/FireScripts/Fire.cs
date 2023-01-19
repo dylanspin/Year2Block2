@@ -20,7 +20,7 @@ public class Fire : MonoBehaviour
     [SerializeField] private List<Fire> spreadOptions = new List<Fire>();
 
     [Header("Private data")]
-    private int spreadCount = 0;
+    private float spreadCount = 0;
     private int spreadNeed = 100;
 
     /// <summary>
@@ -40,7 +40,7 @@ public class Fire : MonoBehaviour
     }
 
     /// <summary>
-    /// Adds to the spread count 
+    /// Adds to the spread count if it reaches the spread need it lights the next fire
     /// </summary>
     public void spread()
     {
@@ -77,13 +77,14 @@ public class Fire : MonoBehaviour
     }
 
     /// <summary>
-    /// Takes of health from the fire when hit something that turns it off
+    /// Takes of health from the fire when hit by the extinguisher if it took to much the fire is turned off
     /// </summary>
-    public void takeFireHealth()
+    public void takeFireHealth(float fireDamage)
     {
-        if(spreadCount > 1)
+        float takeAmount = fireDamage * Time.deltaTime;
+        if(spreadCount - takeAmount > 1)
         {
-            spreadCount --;
+            spreadCount -= takeAmount;
         }
         else
         {
@@ -131,6 +132,9 @@ public class Fire : MonoBehaviour
         fireParticle.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Changes the amount of particles so the player can see trough the fire with thermal vision
+    /// </summary>
     public void setParticle(float newAmount)
     {
         var emission = fireParticle.emission;

@@ -31,7 +31,10 @@ public class Health : MonoBehaviour
         uiScript = newUi;
         currentHealth = maxHealth;
         
-        newUi.setMaxHealth(maxHealth);
+        if(newUi)
+        {
+            newUi.setMaxHealth(maxHealth);
+        }
     }
 
     /// <summary>

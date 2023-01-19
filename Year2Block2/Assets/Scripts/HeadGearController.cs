@@ -8,7 +8,7 @@ public class HeadGearController : MonoBehaviour
 {
     [Header("Components")]
 
-    [Tooltip("Input source for moving around")]
+    [Tooltip("Input source for the buttons")]
     [SerializeField] private XRNode inputSource;
     
     [Tooltip("Post processing volume")]

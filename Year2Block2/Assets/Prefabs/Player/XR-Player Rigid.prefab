@@ -747,7 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputSource: 4
   speedMultiplier: 80
-  walkingSpeed: 3
+  walkingSpeed: 5
   runningSpeed: 5
   extraHeight: 0.2
   playerCol: {fileID: 512116677828840713}
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023195015210860185}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2193b62d30d918642bd8ba7566d2a07b, type: 3}
   m_Name: 
