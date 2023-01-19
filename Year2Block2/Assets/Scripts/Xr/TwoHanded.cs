@@ -86,4 +86,9 @@ public class TwoHanded : XRGrabInteractable
 
         return base.IsSelectableBy(interactor) && !isAlreadyGrabbed;
     }
+
+    // public XRDirectInteractor getInteractor()
+    // {
+    //     return interactorsSelecting[0];
+    // }
 }

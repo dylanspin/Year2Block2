@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ItemHold : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class ItemHold : MonoBehaviour
     [Header("Private data")]
     private List<Holder> inTriggerList = new List<Holder>();
     private Holder holderScript = null;
+    private XRController controller;
+    private bool left = false;
     private bool grabbed = false;
 
     /// <summary>
@@ -33,14 +36,25 @@ public class ItemHold : MonoBehaviour
     }
 
     /// <summary>
+    /// Sets the main controller hand
+    /// </summary>
+    public void setController(XRController newController,bool leftHanded)
+    {
+        controller = newController;
+        left = leftHanded;
+    }
+
+    /// <summary>
     /// When the item is grabbed or let go by the interactor
     /// </summary>
     public void setGrab(bool active)
     {
         grabbed = active;
-        // testingGrab(grabbed);
-        setGrabCollider(active);
 
+        // testingGrab(grabbed);//for testing
+        setGrabCollider(active);
+        getHand(active);
+        
         if(active)//when grabbed
         {
             checkScripts();
@@ -62,6 +76,23 @@ public class ItemHold : MonoBehaviour
                 setHold(true);
             }
         }
+    }
+
+    /// <summary>
+    /// Gets the hand holding the current object
+    /// </summary>
+    private void getHand(bool active)
+    {
+        if(active)
+        {
+            // controller = GetComponent<XRGrabInteractable>().getInteractor();   
+        }
+        else
+        {
+
+        }
+
+        // getInteractor
     }
 
     /// <summary>
@@ -154,5 +185,13 @@ public class ItemHold : MonoBehaviour
         {
             endEffect.loadGameTransition();
         }
+    }
+
+    /// <summary>
+    /// Function returns if the item is held or not
+    /// </summary>
+    public bool isGrabbed()
+    {
+        return grabbed;
     }
 }
