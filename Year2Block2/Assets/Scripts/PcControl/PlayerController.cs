@@ -17,15 +17,14 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The script that controlls the health of the player")]
     [SerializeField] private Health healthScript;
 
+    [Tooltip("The script that controlls the UI on the main interface of the helmet")]
+    [SerializeField] private UIController uiScript;
+
     [Tooltip("The script that allows looking around with pc controlls")]
     [SerializeField] private Look lookScript;
 
     [Tooltip("The script that controlls the whole scene")]
     [SerializeField] private GameController controllerScript;
-
-    [Header("Private data")]
-
-    private UIController uiScript;
 
     /// <summary>
     /// Sets the start information of scritps
@@ -36,14 +35,15 @@ public class PlayerController : MonoBehaviour
         {
             controllerScript.setStart(this,transitionController);
         }
+        
         transitionController.gameObject.SetActive(true);
+
         setStart();
     }
 
-    public void setScripts(GameEffectController effectController,UIController newUI)
+    public void setScripts(GameEffectController effectController)
     {
         visionController.setStart(effectController);
-        uiScript = newUI;
     }
 
     /// <summary>

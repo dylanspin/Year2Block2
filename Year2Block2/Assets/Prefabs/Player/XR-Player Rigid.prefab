@@ -440,6 +440,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1129877125353360733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4053986238682047839}
+  m_Layer: 3
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4053986238682047839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129877125353360733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2023195015210860187}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868181200377781249
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +679,7 @@ Transform:
   - {fileID: 2023195016675850361}
   - {fileID: 2023195016374772603}
   - {fileID: 2023195015212343693}
+  - {fileID: 4053986238682047839}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -746,10 +778,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputSource: 4
+  jumpingSource: 0
   speedMultiplier: 80
   walkingSpeed: 5
   runningSpeed: 5
+  jumpHeight: 4
   extraHeight: 0.2
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  grounCheck: {fileID: 4053986238682047839}
+  GroundDistance: 0.4
   playerCol: {fileID: 512116677828840713}
   rbPlayer: {fileID: 5355597006957194834}
   playerHead: {fileID: 1868181199289973315}
@@ -768,6 +807,7 @@ MonoBehaviour:
   transitionController: {fileID: 405544588}
   visionController: {fileID: 898381542479944387}
   healthScript: {fileID: 898381542479944393}
+  uiScript: {fileID: 0}
   lookScript: {fileID: 898381541552348268}
   controllerScript: {fileID: 0}
 --- !u!114 &898381542479944386
@@ -807,6 +847,7 @@ MonoBehaviour:
   normalVision: {fileID: 11400000, guid: 2e56c7da3b3b55647b398297b8628d0f, type: 2}
   thermalLight: 0.5
   nightLight: 0.9
+  defaultLight: 0.5
 --- !u!114 &898381542479944393
 MonoBehaviour:
   m_ObjectHideFlags: 0

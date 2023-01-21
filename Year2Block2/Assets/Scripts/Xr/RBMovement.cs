@@ -12,6 +12,9 @@ public class RBMovement : MonoBehaviour
     [Tooltip("Input source for moving around")]
     [SerializeField] private XRNode inputSource;
 
+    [Tooltip("Input source for jumping")]
+    [SerializeField] private XRNode jumpingSource;
+
     [Header("Settings Values")]
 
     [Tooltip("The general speed multiplier")]
@@ -23,8 +26,22 @@ public class RBMovement : MonoBehaviour
     [Tooltip("The running speed")]
     [SerializeField] private float runningSpeed = 4.0f;
 
+    [Tooltip("The jumping Height")]
+    [SerializeField] private float jumpHeight = 4.0f;
+
     [Tooltip ("The extra height above the playershead for the collider")]
     [SerializeField]  private float extraHeight = 0.2f;
+
+    [Header("Ground checks")]
+    
+    [Tooltip("the ground layer")]
+    [SerializeField] private LayerMask groundMask;
+
+    [Tooltip("the position the check gets done from")]
+    [SerializeField] Transform grounCheck;
+
+    [Tooltip("the distance the sphere checks for if there is ground")]
+    [SerializeField] float GroundDistance = 0.4f;
 
     [Header("Components")]
 
@@ -39,9 +56,11 @@ public class RBMovement : MonoBehaviour
 
     [Header("private Data")]
 
+    private bool isGrounded = false;
     private Vector2 inputAxis;
     private float currentSpeed;//current movement speed for if i want to make something that changes the speed
     private Vector3 movementPlayer;//movement velocity
+    private bool aButtonDown;//if the jump button is held down
 
     /// <summary>
     /// Sets the start settings
@@ -64,6 +83,30 @@ public class RBMovement : MonoBehaviour
             inputAxis.x = Input.GetAxis("Horizontal");
             inputAxis.y = Input.GetAxis("Vertical");
         }
+
+        checkJump();
+    }
+
+    private void checkJump()
+    {
+        bool aButton;
+    
+        InputDevice device = InputDevices.GetDeviceAtXRNode(jumpingSource);
+        
+        if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.secondaryButton, out aButton) && aButton || Input.GetKey(KeyCode.Space))
+        {
+            if(!aButtonDown)
+            {
+                aButtonDown = true;
+                BoostUp(jumpHeight);
+            }
+        }
+        else
+        {
+            aButtonDown = false; 
+        }
+
+        isGrounded = Physics.OverlapSphere(transform.position, GroundDistance,groundMask).Length > 0;//cast sphere cast
     }
     
     /// <summary>
@@ -94,5 +137,17 @@ public class RBMovement : MonoBehaviour
     public void setRunning(bool active)
     {
         currentSpeed = active? runningSpeed : walkingSpeed;
+    }
+
+    public void BoostUp(float Height)
+    {
+        rbPlayer.AddForce(transform.up * jumpHeight,ForceMode.Impulse);
+        // movementPlayer.y = Mathf.Sqrt(Height * -2);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(grounCheck.position, GroundDistance);
     }
 }

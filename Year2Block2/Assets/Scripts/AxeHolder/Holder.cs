@@ -24,8 +24,7 @@ public class Holder : MonoBehaviour
     [SerializeField] private ItemHold startHold;
 
     [Header("Private data")]
-
-    private bool holding = false;
+    private ItemHold currentHolding;
 
     ///still show a see trough indicator that the axe can be held maybe in a axe shape when in trigger
 
@@ -38,6 +37,18 @@ public class Holder : MonoBehaviour
         {
             startHold.transform.parent = null;
             startHold.setStartGrab(this);
+        }
+    }
+
+    private void Update()
+    {
+        if(followSetPos)
+        {
+            if(getHold())
+            {
+                Debug.Log("Test");
+                currentHolding.setToHoldPos();
+            }
         }
     }
 
@@ -83,17 +94,17 @@ public class Holder : MonoBehaviour
     {
         if(ghostIndicator)
         {
-            ghostIndicator.SetActive(active && !holding);
+            ghostIndicator.SetActive(active && !getHold());
         }
     }
 
     /// <summary>
     /// if item is set to be hold 
     /// </summary>
-    public void setHold(bool active)
+    public void setHold(ItemHold holdScript)
     {
-        holding = active;
-        if(holding)
+        currentHolding = holdScript;
+        if(holdScript != null)
         {
             showIndicator(false);
         }
@@ -104,7 +115,7 @@ public class Holder : MonoBehaviour
     /// </summary>
     public bool getHold()
     {
-        return holding;
+        return currentHolding != null;
     }
 
     /// <summary>

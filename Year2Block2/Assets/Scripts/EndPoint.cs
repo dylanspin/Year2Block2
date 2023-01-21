@@ -48,6 +48,7 @@ public class EndPoint : MonoBehaviour
 
             if(!people.Contains(dollScript))//if not already resqued
             {
+                dollScript.stopSound();
                 people.Add(dollScript);
                 setText();
 

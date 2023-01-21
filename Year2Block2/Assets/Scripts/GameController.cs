@@ -5,9 +5,6 @@ public class GameController : MonoBehaviour
 {   
     [Header("Scipts")]
 
-    [Tooltip("The Ui script controlling the interface")]
-    [SerializeField] private UIController uiScript;
-
     [Tooltip("The end point for the dolls script")]
     [SerializeField] private EndPoint pointScript;
 
@@ -32,11 +29,12 @@ public class GameController : MonoBehaviour
 
     private void setPlayerScripts()
     {
-        controllerScript.setScripts(effectController,uiScript);
+        controllerScript.setScripts(effectController);
     }
 
     public void setEnd(bool active)
     {
+        effectController.setVision(0);
         endController.setState(active);
     }
 }

@@ -55,9 +55,11 @@ public class Health : MonoBehaviour
     {
         if(currentHealth < maxHealth)
         {
-            if(currentHealth + healthRegen < maxHealth)
+            float addAmount = healthRegen * Time.deltaTime;
+
+            if(currentHealth + addAmount < maxHealth)
             {
-                currentHealth += healthRegen;
+                currentHealth += addAmount;
             }
             else
             {

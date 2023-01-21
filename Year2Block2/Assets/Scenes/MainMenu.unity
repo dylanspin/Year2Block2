@@ -1177,7 +1177,7 @@ GameObject:
   - component: {fileID: 772432713}
   - component: {fileID: 772432712}
   - component: {fileID: 772432711}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,6 +1642,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2023195016795698282, guid: 4671b43761c4a33428985883b7c85e8d,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 12287
+      objectReference: {fileID: 0}
     - target: {fileID: 2023195016795698285, guid: 4671b43761c4a33428985883b7c85e8d,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -1710,7 +1715,7 @@ PrefabInstance:
     - target: {fileID: 8340619240689849398, guid: e2f898ffa940299448e96dd98a55bc1c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.32
+      value: -3.537
       objectReference: {fileID: 0}
     - target: {fileID: 8340619240689849398, guid: e2f898ffa940299448e96dd98a55bc1c,
         type: 3}
@@ -2487,7 +2492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323eba7301b8eb6458cb47e755f93af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiScript: {fileID: 0}
   pointScript: {fileID: 0}
   effectController: {fileID: 0}
   fireScript: {fileID: 0}

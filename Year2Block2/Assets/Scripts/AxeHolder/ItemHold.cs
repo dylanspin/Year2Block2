@@ -30,7 +30,7 @@ public class ItemHold : MonoBehaviour
     public void setStartGrab(Holder startScript)
     {
         holderScript = startScript;
-        holderScript.setHold(true);
+        holderScript.setHold(this);
         setGrabCollider(false);
         setHold(true);
     }
@@ -61,7 +61,7 @@ public class ItemHold : MonoBehaviour
             
             if(holderScript)
             {
-                holderScript.setHold(false);
+                holderScript.setHold(null);
                 setHold(false);
             }
         }
@@ -72,7 +72,7 @@ public class ItemHold : MonoBehaviour
             if(closedPos != null)
             {
                 holderScript = closedPos;
-                holderScript.setHold(true);
+                holderScript.setHold(this);
                 setHold(true);
             }
         }
@@ -126,14 +126,22 @@ public class ItemHold : MonoBehaviour
         if(active)
         {
             objectRb.constraints = RigidbodyConstraints.FreezeAll;
-            Transform holdTrans = holderScript.getSetTrans();
-            transform.position = holdTrans.position;
-            transform.eulerAngles = holdTrans.eulerAngles;
+            setToHoldPos();
         }
         else
         {
             objectRb.constraints = RigidbodyConstraints.None;
         }
+    }
+
+    /// <summary>
+    /// Set the position of held object
+    /// </summary>
+    public void setToHoldPos()
+    {
+        Transform holdTrans = holderScript.getSetTrans();
+        transform.position = holdTrans.position;
+        transform.eulerAngles = holdTrans.eulerAngles;
     }
 
     /// <summary>

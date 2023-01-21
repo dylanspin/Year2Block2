@@ -29,17 +29,28 @@ public class extinguisher : MonoBehaviour
     [Tooltip("The particle system for the extinguisher")]
     [SerializeField] private ParticleSystem particle;
 
+    [Tooltip("The sound effect for the extinguisher")]
+    [SerializeField] private AudioSource audioEffect;
 
+    [Header("Private data")]
+
+    private bool activeShooting = false;
+
+    /// <summary>
+    /// checks if active if so shoot and check if hitting fire 
+    /// </summary>
     private void Update()
     {
-        bool mainTrigger;
-        InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
-
-        if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out mainTrigger) || Input.GetKey(KeyCode.P))
+        if(activeShooting || Input.GetMouseButton(0))
         {
             if(!particle.isPlaying)
             {
                 particle.Play();
+            }
+
+            if(!audioEffect.isPlaying)
+            {
+                audioEffect.Play();
             }
 
             RaycastHit hit;
@@ -48,13 +59,34 @@ public class extinguisher : MonoBehaviour
             {
                 if(hit.collider.tag == "Fire")
                 {
-                    hit.transform.GetComponent<Fire>().takeFireHealth(damageToFire);
+                    hit.transform.parent.GetComponent<Fire>().takeFireHealth(damageToFire);
                 }
             }
         }
         else
         {
             particle.Stop();
+            audioEffect.Stop();
         }
+
+        drawRay();
+    }
+
+    /// <summary>
+    /// Draws the ray for debugging
+    /// </summary>
+    private void drawRay()
+    {
+        Vector3 forward = particle.transform.TransformDirection(Vector3.forward) * range;
+        Debug.DrawRay(particle.transform.position, forward, Color.green);
+    }
+
+
+    /// <summary>
+    /// Turns on or off via the xr grab interactable script
+    /// </summary>
+    public void shootExtinguisher(bool active)
+    {
+        activeShooting = active;
     }
 }
