@@ -5,9 +5,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ItemHold : MonoBehaviour
 {
+
     [Header("Scripts")]
 
+    [Tooltip("The script for transitioning used for grabbing the helmet")]
     [SerializeField] endEffect endEffect;
+
+    [Tooltip("The script for controlling the extinguisher")]
+    [SerializeField] extinguisher extinguisherScript;
+
+    [Tooltip("The script for controlling a twohanded item")]
+    [SerializeField] TwoHanded twoScript;
  
     [Header("Components")]
 
@@ -20,8 +28,6 @@ public class ItemHold : MonoBehaviour
     [Header("Private data")]
     private List<Holder> inTriggerList = new List<Holder>();
     private Holder holderScript = null;
-    private XRController controller;
-    private bool left = false;
     private bool grabbed = false;
 
     /// <summary>
@@ -36,15 +42,6 @@ public class ItemHold : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the main controller hand
-    /// </summary>
-    public void setController(XRController newController,bool leftHanded)
-    {
-        controller = newController;
-        left = leftHanded;
-    }
-
-    /// <summary>
     /// When the item is grabbed or let go by the interactor
     /// </summary>
     public void setGrab(bool active)
@@ -53,12 +50,10 @@ public class ItemHold : MonoBehaviour
 
         // testingGrab(grabbed);//for testing
         setGrabCollider(active);
-        getHand(active);
-        
+        checkScripts(active);
+
         if(active)//when grabbed
         {
-            checkScripts();
-            
             if(holderScript)
             {
                 holderScript.setHold(null);
@@ -67,6 +62,8 @@ public class ItemHold : MonoBehaviour
         }
         else//when let go
         {
+            SetHands.resetHand();
+
             Holder closedPos = getClosed();
 
             if(closedPos != null)
@@ -76,23 +73,6 @@ public class ItemHold : MonoBehaviour
                 setHold(true);
             }
         }
-    }
-
-    /// <summary>
-    /// Gets the hand holding the current object
-    /// </summary>
-    private void getHand(bool active)
-    {
-        if(active)
-        {
-            // controller = GetComponent<XRGrabInteractable>().getInteractor();   
-        }
-        else
-        {
-
-        }
-
-        // getInteractor
     }
 
     /// <summary>
@@ -144,26 +124,6 @@ public class ItemHold : MonoBehaviour
         transform.eulerAngles = holdTrans.eulerAngles;
     }
 
-    /// <summary>
-    /// Adds or removes holder to the script depending on if this object is in the trigger
-    /// </summary>
-    public void setIntrigger(Holder newAdd,bool add)
-    {
-        if(add)
-        {
-            if(!inTriggerList.Contains(newAdd))
-            {
-                inTriggerList.Add(newAdd);
-            }
-        }
-        else
-        {
-            if(inTriggerList.Contains(newAdd))
-            {
-                inTriggerList.Remove(newAdd);
-            }
-        }
-    }
 
     /// <summary>
     /// Function returns the most close transform in the list
@@ -187,11 +147,47 @@ public class ItemHold : MonoBehaviour
         return closedPos;
     }
 
-    private void checkScripts()
+    private void checkScripts(bool active)
     {
-        if(endEffect)
+        if(active)
         {
-            endEffect.loadGameTransition();
+            if(endEffect)
+            {
+                endEffect.loadGameTransition();
+            }
+
+            if(twoScript)
+            {
+                twoScript.setStartRot();
+            }
+        }
+        else
+        {
+            if(extinguisherScript)
+            {
+                extinguisherScript.shootExtinguisher(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Adds or removes holder to the script depending on if this object is in the trigger
+    /// </summary>
+    public void setIntrigger(Holder newAdd,bool add)
+    {
+        if(add)
+        {
+            if(!inTriggerList.Contains(newAdd))
+            {
+                inTriggerList.Add(newAdd);
+            }
+        }
+        else
+        {
+            if(inTriggerList.Contains(newAdd))
+            {
+                inTriggerList.Remove(newAdd);
+            }
         }
     }
 

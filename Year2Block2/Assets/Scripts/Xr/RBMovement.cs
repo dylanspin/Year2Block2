@@ -89,24 +89,27 @@ public class RBMovement : MonoBehaviour
 
     private void checkJump()
     {
-        bool aButton;
-    
-        InputDevice device = InputDevices.GetDeviceAtXRNode(jumpingSource);
-        
-        if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.secondaryButton, out aButton) && aButton || Input.GetKey(KeyCode.Space))
+        isGrounded = Physics.OverlapSphere(transform.position, GroundDistance,groundMask).Length > 0;//cast sphere cast
+
+        if(isGrounded)
         {
-            if(!aButtonDown)
+            bool aButton;
+        
+            InputDevice device = InputDevices.GetDeviceAtXRNode(jumpingSource);
+            
+            if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out aButton) && aButton || Input.GetKey(KeyCode.Space))
             {
-                aButtonDown = true;
-                BoostUp(jumpHeight);
+                if(!aButtonDown)
+                {
+                    aButtonDown = true;
+                    BoostUp(jumpHeight);
+                }
+            }
+            else
+            {
+                aButtonDown = false; 
             }
         }
-        else
-        {
-            aButtonDown = false; 
-        }
-
-        isGrounded = Physics.OverlapSphere(transform.position, GroundDistance,groundMask).Length > 0;//cast sphere cast
     }
     
     /// <summary>
@@ -145,9 +148,9 @@ public class RBMovement : MonoBehaviour
         // movementPlayer.y = Mathf.Sqrt(Height * -2);
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(grounCheck.position, GroundDistance);
-    }
+    // void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawSphere(grounCheck.position, GroundDistance);
+    // }
 }

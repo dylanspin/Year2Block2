@@ -2997,12 +2997,12 @@ PrefabInstance:
     - target: {fileID: 2656868154618872257, guid: ce1ebd605f2485b4f814fa54adef0bfa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 16
+      value: -47
       objectReference: {fileID: 0}
     - target: {fileID: 2656868154618872270, guid: ce1ebd605f2485b4f814fa54adef0bfa,
         type: 3}
       propertyPath: m_text
-      value: "Can be used to break different things :\nDoors \nGlass"
+      value: "Can be used to break different obstacles :\nDoors \nGlass"
       objectReference: {fileID: 0}
     - target: {fileID: 2656868154618872270, guid: ce1ebd605f2485b4f814fa54adef0bfa,
         type: 3}
@@ -3012,7 +3012,8 @@ PrefabInstance:
     - target: {fileID: 2656868155429012760, guid: ce1ebd605f2485b4f814fa54adef0bfa,
         type: 3}
       propertyPath: m_text
-      value: 'Axes can be either grabbed with two hands or one. '
+      value: 'Axes can be either grabbed with two hands and have more power. But
+        can also be held with one. '
       objectReference: {fileID: 0}
     - target: {fileID: 2656868155429012760, guid: ce1ebd605f2485b4f814fa54adef0bfa,
         type: 3}
@@ -4096,6 +4097,33 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WhiteBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656868154618872257, guid: ce1ebd605f2485b4f814fa54adef0bfa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656868154618872270, guid: ce1ebd605f2485b4f814fa54adef0bfa,
+        type: 3}
+      propertyPath: m_text
+      value: 'Side grips = Grabbing Objects
+
+        Front trigger = extinguisher '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656868155429012760, guid: ce1ebd605f2485b4f814fa54adef0bfa,
+        type: 3}
+      propertyPath: m_text
+      value: 'Left Y = Night Vision
+
+        Left X = Thermal Vision
+
+        Right
+        A = Jumping'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656868155504107159, guid: ce1ebd605f2485b4f814fa54adef0bfa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -159
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1ebd605f2485b4f814fa54adef0bfa, type: 3}

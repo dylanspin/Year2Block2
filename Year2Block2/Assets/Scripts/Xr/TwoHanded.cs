@@ -5,19 +5,23 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class TwoHanded : XRGrabInteractable
 {
-    public List<XRSimpleInteractable> secondGrabPoints = new List<XRSimpleInteractable>();
+    [Header("Settings")]
+
+    [Tooltip("The start rotation for the twohanded object")]
+    [SerializeField] Vector3 defaultRot = new Vector3(-90,-90,0);
+
+    [SerializeField] private List<XRSimpleInteractable> secondGrabPoints = new List<XRSimpleInteractable>();
+    [SerializeField] private enum TwoHandRotationType {none,First,Second};
+    [SerializeField] private TwoHandRotationType twoHandRotationType;
+
+    [Header("Private data")]
     private XRBaseInteractor secondInteractor;
     private Quaternion startRotation;
 
-    public enum TwoHandRotationType {none,First,Second};
-    public TwoHandRotationType twoHandRotationType;
 
-    // protected override void Awake()
-    // {
-    //     base.Awake();
-    //     selectMode = InteractableSelectMode.Multiple;
-    // }
-
+    /// <summary>
+    /// Sets the second grab points listeners for interacting with two hands
+    /// </summary>
     private void Start()
     {
         foreach(var point in secondGrabPoints)
@@ -27,16 +31,35 @@ public class TwoHanded : XRGrabInteractable
         }
     }
 
+    /// <summary>
+    /// Processes the interactable and sets the right angle / scale for the direction of the axe head
+    /// </summary>
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
-        if(secondInteractor && isSelected)
+        if(isTwoHanded())//if is held with two hands
         {
+            setFlipped(selectingInteractor.GetComponent<SetHands>().getHandId() == 0);
             selectingInteractor.attachTransform.rotation = GetTwoHandRotation();
+        }
+        else 
+        {
+        
         }
 
         base.ProcessInteractable(updatePhase);
     }
 
+    /// <summary>
+    /// Flips the axe when held with other hand
+    /// </summary>
+    private void setFlipped(bool active)
+    {
+        transform.localScale = new Vector3(active? -1 : 1, 1,1);
+    }
+
+    /// <summary>
+    /// Gets the rotation between the two hands
+    /// </summary>
     private Quaternion GetTwoHandRotation()
     {
         Quaternion targetRotation;
@@ -56,30 +79,25 @@ public class TwoHanded : XRGrabInteractable
         return targetRotation;
     }
 
+    /// <summary>
+    /// When the second point is held set the secondinteractor
+    /// </summary>
     public void onSecondHandGrab(XRBaseInteractor interactor)
     {
         secondInteractor = interactor;
-        // startRotation = selectingInteractor.transform.localRotation;
     }
 
+    /// <summary>
+    /// When the second point is letgo set the secondinteractor to null
+    /// </summary>
     public void onSecondHandRelease(XRBaseInteractor interactor)
     {
         secondInteractor = null;
-        selectingInteractor.transform.localRotation = startRotation;
     }
 
-    // protected override void OnSelectEntered(XRBaseInteractor interactor)
-    // {
-    //     base.OnSelectEntered(interactor);
-    //     startRotation = selectingInteractor.transform.localRotation;
-    // }
-
-    // protected override void OnSelectExited(XRBaseInteractor interactor)
-    // {
-    //     base.OnSelectExited(interactor);
-    //     selectingInteractor.transform.localRotation = startRotation;
-    // }
-
+     /// <summary>
+    /// Sets if the axe can be grabbed or not
+    /// </summary>
     public override bool IsSelectableBy(XRBaseInteractor interactor)
     {
         bool isAlreadyGrabbed = selectingInteractor && !interactor.Equals(selectingInteractor);
@@ -87,8 +105,16 @@ public class TwoHanded : XRGrabInteractable
         return base.IsSelectableBy(interactor) && !isAlreadyGrabbed;
     }
 
-    // public XRDirectInteractor getInteractor()
-    // {
-    //     return interactorsSelecting[0];
-    // }
+    /// <summary>
+    /// Returns if is held with two hands is used for the axe adds extra velocity power when held with two hands
+    /// </summary>
+    public bool isTwoHanded()
+    {
+        return secondInteractor && isSelected;
+    }
+
+    public void setStartRot()
+    {
+        selectingInteractor.attachTransform.localEulerAngles = defaultRot;
+    }
 }

@@ -7015,7 +7015,7 @@ MonoBehaviour:
   rotationAxis: {x: 0, y: 90, z: 0}
   rotationLimits: {x: -90, y: 90}
   breakAll: 0
-  breakingVel: 8
+  breakingVel: 10
   fallingForce: 100
   colliderLayer: NonColliding
   doorSoundScript: {fileID: 2711902756868956535}

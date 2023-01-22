@@ -847,7 +847,6 @@ MonoBehaviour:
   normalVision: {fileID: 11400000, guid: 2e56c7da3b3b55647b398297b8628d0f, type: 2}
   thermalLight: 0.5
   nightLight: 0.9
-  defaultLight: 0.5
 --- !u!114 &898381542479944393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +889,7 @@ GameObject:
   - component: {fileID: 1868181199686608540}
   - component: {fileID: 1868181199686608539}
   - component: {fileID: 1868181199686608538}
+  - component: {fileID: 4819166669018154584}
   m_Layer: 2
   m_Name: LeftController
   m_TagString: Untagged
@@ -1055,6 +1055,19 @@ MonoBehaviour:
   m_MoveObjectIn: 14
   m_MoveObjectOut: 15
   m_PoseProvider: {fileID: 0}
+--- !u!114 &4819166669018154584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023195015212343690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d309177a6c8e656408e4b52d7536110b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handId: 0
 --- !u!1 &2023195016374772600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,6 +1081,7 @@ GameObject:
   - component: {fileID: 1868181200285936643}
   - component: {fileID: 1868181200285936642}
   - component: {fileID: 1868181200285936641}
+  - component: {fileID: 6756496778275059886}
   m_Layer: 2
   m_Name: RightController
   m_TagString: Untagged
@@ -1233,6 +1247,19 @@ MonoBehaviour:
   m_MoveObjectIn: 14
   m_MoveObjectOut: 15
   m_PoseProvider: {fileID: 0}
+--- !u!114 &6756496778275059886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023195016374772600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d309177a6c8e656408e4b52d7536110b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handId: 1
 --- !u!1 &2023195016675850310
 GameObject:
   m_ObjectHideFlags: 0

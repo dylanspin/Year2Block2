@@ -256,6 +256,9 @@ MonoBehaviour:
     m_Bits: 1
   particle: {fileID: 8411327295367906808}
   audioEffect: {fileID: 1988316425679221338}
+  clips:
+  - {fileID: 8300000, guid: 7bc68c8794586374581aa4f3709e4181, type: 3}
+  - {fileID: 8300000, guid: 5ea9fa04fe2ee3a46aab55e5445b4c24, type: 3}
 --- !u!82 &1988316425679221338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -266,15 +269,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4afd70f1929fd594b99bc6df741bc5fa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7bc68c8794586374581aa4f3709e4181, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -414,6 +417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: looping
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889726835891497788, guid: fe893899313ccc74785f8ce706b0033b,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2889726835891497788, guid: fe893899313ccc74785f8ce706b0033b,
         type: 3}

@@ -36,12 +36,11 @@ public class HeadGearController : MonoBehaviour
     [Tooltip("Night vision lighting level")]
     [SerializeField] private float nightLight = 0.9f;
 
-    [Tooltip("default vision lighting level")]
-    [SerializeField] private float defaultLight = 0.5f;
-
     [Header("Private data")]
     private bool aButtonDown = false;
     private bool bButtonDown = false;
+    private float defaultLight = 0.5f;
+
     private GameEffectController mainEffectController;
 
     /// <summary>
@@ -51,7 +50,7 @@ public class HeadGearController : MonoBehaviour
     public void setStart(GameEffectController effectController)
     {
         mainEffectController = effectController;
-        setSkyBox(0);
+        defaultLight = RenderSettings.ambientIntensity;
     }
 
    /// <summary>

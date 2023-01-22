@@ -37,11 +37,12 @@ public class AxeCollider : MonoBehaviour
     {
         previous = axeHead.position;
 
-        holdScript.onSelectEntered.AddListener(onHandGrab);
-        holdScript.onSelectExited.AddListener(onHandRelease);
+        //doesnt work
+        // holdScript.onSelectEntered.AddListener(onHandGrab);
+        // holdScript.onSelectExited.AddListener(onHandRelease);
 
-        secondGrab.onSelectEntered.AddListener(onHandGrab);
-        secondGrab.onSelectExited.AddListener(onHandRelease);
+        // secondGrab.onSelectEntered.AddListener(onHandGrab);
+        // secondGrab.onSelectExited.AddListener(onHandRelease);
     }
 
     /// <summary>
@@ -61,7 +62,10 @@ public class AxeCollider : MonoBehaviour
         if(other.collider.gameObject.tag == breakTag)
         {
             DoorPiece pieceScript = other.collider.gameObject.GetComponent<DoorPiece>();
-            pieceScript.hitPiece(velocity,transform.root.transform,this);
+            float sendVeloc = (holdScript.isTwoHanded() ? 2f : 1) * velocity;
+
+            pieceScript.hitPiece(sendVeloc,transform.root.transform,this);
+            ActivateHaptic();
         }
     }
 

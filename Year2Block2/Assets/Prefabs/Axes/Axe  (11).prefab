@@ -509,34 +509,10 @@ MonoBehaviour:
         m_CallState: 2
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -5823404418839509093}
-        m_TargetAssemblyTypeName: ItemHold, Assembly-CSharp
-        m_MethodName: setGrab
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -5823404418839509093}
-        m_TargetAssemblyTypeName: ItemHold, Assembly-CSharp
-        m_MethodName: setGrab
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -601,6 +577,7 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  defaultRot: {x: -90, y: -90, z: 0}
   secondGrabPoints:
   - {fileID: 2182057991103256091}
   twoHandRotationType: 2
@@ -633,6 +610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c6e4e5f490c8543a78afed14a17937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endEffect: {fileID: 0}
+  extinguisherScript: {fileID: 0}
+  twoScript: {fileID: 2182057992833402610}
   testMesh: {fileID: 687273447972893863}
   testMat:
   - {fileID: 2100000, guid: 91b6c82de3d03654ab351ed2ab858dcf, type: 2}

@@ -152,6 +152,7 @@ public class Door : MonoBehaviour
 
         if(doorSoundScript)
         {
+            doorSoundScript.gameObject.SetActive(true);
             doorSoundScript.playSoundEffect();
         }
     }

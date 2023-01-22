@@ -28,7 +28,7 @@ public class FireDamage : MonoBehaviour
     /// </summary>
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.root.tag == "Player")
+        if(other.transform.root.tag == playerTag)
         {
             if(fireScript.isOnFire())
             {
@@ -43,7 +43,7 @@ public class FireDamage : MonoBehaviour
     /// </summary>
     private void OnTriggerExit(Collider other)
     {
-        if(other.transform.root.tag == "Player")
+        if(other.transform.root.tag == playerTag)
         {
             if(intrigger)
             {

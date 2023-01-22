@@ -32,6 +32,10 @@ public class extinguisher : MonoBehaviour
     [Tooltip("The sound effect for the extinguisher")]
     [SerializeField] private AudioSource audioEffect;
 
+    [Tooltip("The sound clips for the extinguisher")]
+    [SerializeField] private AudioClip[] clips = new AudioClip[2];
+
+
     [Header("Private data")]
 
     private bool activeShooting = false;
@@ -41,18 +45,8 @@ public class extinguisher : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if(activeShooting || Input.GetMouseButton(0))
+        if(activeShooting)
         {
-            if(!particle.isPlaying)
-            {
-                particle.Play();
-            }
-
-            if(!audioEffect.isPlaying)
-            {
-                audioEffect.Play();
-            }
-
             RaycastHit hit;
             Ray ray = new Ray(particle.transform.position, particle.transform.forward);
             if(Physics.Raycast(ray, out hit, range, viewLayers))
@@ -63,10 +57,15 @@ public class extinguisher : MonoBehaviour
                 }
             }
         }
-        else
+
+        if(Input.GetMouseButtonDown(0))
         {
-            particle.Stop();
-            audioEffect.Stop();
+            shootExtinguisher(true);
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            shootExtinguisher(false);
         }
 
         drawRay();
@@ -88,5 +87,18 @@ public class extinguisher : MonoBehaviour
     public void shootExtinguisher(bool active)
     {
         activeShooting = active;
+
+        if(active)
+        {
+            audioEffect.clip = clips[0];
+            audioEffect.Play();
+            particle.Play();
+        }
+        else
+        {
+            particle.Stop();
+            audioEffect.Stop();
+            audioEffect.PlayOneShot(clips[1], 0.5f);
+        }
     }
 }
