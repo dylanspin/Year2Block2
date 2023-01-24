@@ -17,11 +17,11 @@ public class Fire : MonoBehaviour
     [SerializeField] private AudioSource fireSound;
 
     [Tooltip("The fires this fire can spread to")]
-    [SerializeField] private List<Fire> spreadOptions = new List<Fire>();
+    [SerializeField] private List<Fire> spreadOptions = new List<Fire>();//the connected fires where this fire can spread to this is serialized for custom connections to
 
     [Header("Private data")]
-    private float spreadCount = 0;
-    private int spreadNeed = 100;
+    private float spreadCount = 0;//the current spread counter this is also the health of the fire
+    private int spreadNeed = 100;//the amount the fire needs to spread
 
     /// <summary>
     /// Sets the connecting fires

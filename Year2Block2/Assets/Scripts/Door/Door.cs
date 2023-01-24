@@ -30,6 +30,7 @@ public class Door : MonoBehaviour
     [Tooltip("The min velocity needed to break the door")]
     [SerializeField] private float breakingVel = 1.5f;
 
+    [Tooltip("The force that gets added to the door when its broken free to add extra impact")]
     [SerializeField] private float fallingForce = 100;
 
     [Tooltip("The new layer of the broken of piece after being hit")]
@@ -48,8 +49,8 @@ public class Door : MonoBehaviour
 
     [Header("Private data")]
     
-    private Rigidbody rb;
-    private HingeJoint hinge;
+    private Rigidbody rb;//the rigid body of the whole door when its broken free
+    private HingeJoint hinge;//the joint component used as hinges
 
     /// <summary>
     /// On start sets the settings for the door pieces and runs a check to prevent bugs 
@@ -132,7 +133,7 @@ public class Door : MonoBehaviour
     {
         for(int i=0; i<allPoints.Length; i++)
         {
-            if(allPoints[i])//if the piece still excist
+            if(allPoints[i])//if the piece still excist to prevent bugs
             {
                 if(placeHolder)
                 {

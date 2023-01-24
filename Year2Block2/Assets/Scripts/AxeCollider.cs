@@ -28,7 +28,6 @@ public class AxeCollider : MonoBehaviour
 
     private Vector3 previous;
     private float velocity;
-    private List<XRController> controller; 
 
     /// <summary>
     /// Sets the start function listeners 
@@ -36,13 +35,6 @@ public class AxeCollider : MonoBehaviour
     private void Start()
     {
         previous = axeHead.position;
-
-        //doesnt work
-        // holdScript.onSelectEntered.AddListener(onHandGrab);
-        // holdScript.onSelectExited.AddListener(onHandRelease);
-
-        // secondGrab.onSelectEntered.AddListener(onHandGrab);
-        // secondGrab.onSelectExited.AddListener(onHandRelease);
     }
 
     /// <summary>
@@ -62,45 +54,10 @@ public class AxeCollider : MonoBehaviour
         if(other.collider.gameObject.tag == breakTag)
         {
             DoorPiece pieceScript = other.collider.gameObject.GetComponent<DoorPiece>();
-            float sendVeloc = (holdScript.isTwoHanded() ? 2f : 1) * velocity;
+            float sendVeloc = (holdScript.isTwoHanded() ? 2f : 1) * velocity;//if is grabbed with two hands double the hit force
 
             pieceScript.hitPiece(sendVeloc,transform.root.transform,this);
-            ActivateHaptic();
+            // ActivateHaptic();//Would have added shake to the controller when something is broken.
         }
-    }
-
-    /// <summary>
-    /// When the controller grabs the axe adds to the list for shaking
-    /// </summary>
-    public void onHandGrab(XRBaseInteractor interactor)
-    {
-        XRController newController = interactor.gameObject.GetComponent<XRController>();
-        if(!controller.Contains(newController))
-        {
-            controller.Add(newController);
-        }
-    }
-
-    /// <summary>
-    /// When the controller lets go remove from list
-    /// </summary>
-    public void onHandRelease(XRBaseInteractor interactor)
-    {
-        XRController newController = interactor.gameObject.GetComponent<XRController>();
-        controller.Remove(newController);
-    }
-
-    /// <summary>
-    /// Shakes the controller when the axe collided with breakable piece
-    /// </summary>
-    public void ActivateHaptic()
-    {
-        // for(int i=0; i<controller.Count; i++)
-        // {
-        //     if(controller[i])
-        //     {
-        //         controller[i].SendHapticImpulse(0.7f, 2f);
-        //     }
-        // }
     }
 }

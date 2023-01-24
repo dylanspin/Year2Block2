@@ -10,7 +10,7 @@ public class ColumnManager : MonoBehaviour
     [SerializeField] private List<ColumnManager> connectingColums = new List<ColumnManager>();
 
     [Header("Private data")]
-    private FireController controllerScript;
+    private FireController controllerScript;//the main fire controller script on the root object
 
     /// <summary>
     /// Sets the starting data called from the firecontroller

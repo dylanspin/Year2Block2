@@ -25,19 +25,17 @@ public class EndPoint : MonoBehaviour
     private List<Doll> people = new List<Doll>();
 
     /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Sets the start count of how many dolls there are in the scene
     /// </summary>
     public void setStartData(List<Doll> setPeople)
     {
-        inMap = setPeople;
-        setText();
+        inMap = setPeople;//sets the amount of dolls in the scene
+        setText();//sets the UI of the end point
     }
 
     /// <summary>
-    /// OnTriggerEnter is called when the Collider other enters the trigger.
+    /// when gameobject enters the trigger check if its a doll if so add to the count 
     /// </summary>
-    /// <param name="other">The other Collider involved in this collision.</param>
     private void OnTriggerEnter(Collider other)
     {
         GameObject rootObj = other.transform.root.gameObject;
@@ -48,9 +46,9 @@ public class EndPoint : MonoBehaviour
 
             if(!people.Contains(dollScript))//if not already resqued
             {
-                dollScript.stopSound();
-                people.Add(dollScript);
-                setText();
+                dollScript.stopSound();//stops the "help help" sound of the doll
+                people.Add(dollScript);//ads to the found list
+                setText();//Updates the UI
 
                 if(people.Count >= inMap.Count)//if all people are resqued 
                 {

@@ -19,10 +19,10 @@ public class FireController : MonoBehaviour
     [SerializeField] private int startSpread = 20;
 
     [Header("Private data")]
-    private PlayerController player;
-    private int inTrigger = 0;
-    private List<Fire> allFires = new List<Fire>();
-    private List<Fire> randomFires = new List<Fire>();
+    private PlayerController player;//the main player controller script for taking damage if the player is in any trigger
+    private int inTrigger = 0;//the intrigger count this counts in how many triggers the player is currently
+    private List<Fire> allFires = new List<Fire>();//list of al the fires in the scene
+    private List<Fire> randomFires = new List<Fire>();//list used for setting on random fires at the start of the game so there wont be any double lightings of fire
 
     /// <summary>
     /// The start function of this script called from the game controller. Sets the main player script for taking health
@@ -47,6 +47,9 @@ public class FireController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the start fires using the value startSpread
+    /// </summary>
     private void setStartFires()
     {
         for(int i=0; i<startSpread; i++)
@@ -109,6 +112,9 @@ public class FireController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add the fire cell to the list at the start of the scene so all the fires are in one list
+    /// </summary>
     public void addFireToList(Fire added)
     {
         if(!allFires.Contains(added))
@@ -118,6 +124,9 @@ public class FireController : MonoBehaviour
         }
     }   
 
+    /// <summary>
+    /// set the particle systems emition when switching between different types of views
+    /// </summary>
     public void downFire(float emitionAmount)
     {
         for(int i=0; i<allFires.Count; i++)

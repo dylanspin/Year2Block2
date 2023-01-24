@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OnCollisionStop : MonoBehaviour
 {
+    /*Made by Sergiu*/
     [SerializeField] public AudioSource source;
     [SerializeField] public AudioClip clip;
 

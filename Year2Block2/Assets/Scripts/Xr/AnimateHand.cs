@@ -33,6 +33,9 @@ public class AnimateHand : MonoBehaviour
     private float m_pointBlend = 0.0f;
     private float m_thumbsUpBlend = 0.0f;
 
+    /// <summary>
+    /// Sets the start data
+    /// </summary>
     private void Start()
     {
         m_animParamIndexFlex = Animator.StringToHash(ANIM_PARAM_NAME_FLEX);
@@ -42,11 +45,17 @@ public class AnimateHand : MonoBehaviour
         m_animParamIndexPose = Animator.StringToHash(ANIM_PARAM_NAME_POSE);
     }
 
+    /// <summary>
+    /// Called every frame and runs the updateAnimStates function 
+    /// </summary>
     private void Update()
     {
         UpdateAnimStates();
     }
 
+    /// <summary>
+    /// Runs all the imput checks and uses those to animate the hand model using the animator statemachine
+    /// </summary>
     private void UpdateAnimStates()
     {
         float flex;

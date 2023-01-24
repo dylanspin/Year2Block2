@@ -35,7 +35,7 @@ public class DoorPiece : MonoBehaviour
 
     [Header("Private values")]
     private bool broken = false;//if current piece is broken off
-    private float breakingVel = 1.5f;
+    private float breakingVel = 1.5f;//the needed velocity for breaking this piece
 
     /// <summary>
     /// Start function checks if the object it self is in its own list if so removes it this is used to prevent bugs

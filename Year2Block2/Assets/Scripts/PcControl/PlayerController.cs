@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameController controllerScript;
 
     /// <summary>
-    /// Sets the start information of scritps
+    /// Sets the start information of scripts
     /// </summary>  
     private void Start()
     {
@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
         setStart();
     }
 
+    /// <summary>
+    /// Sets the start data from the game controller
+    /// </summary>
     public void setScripts(GameEffectController effectController)
     {
         visionController.setStart(effectController);

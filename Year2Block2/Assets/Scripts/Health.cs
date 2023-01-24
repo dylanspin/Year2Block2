@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         
         if(newUi)
         {
-            newUi.setMaxHealth(maxHealth);
+            newUi.setMaxHealth(maxHealth);//sets the "Health bar" slider with the new health value
         }
     }
 
@@ -44,7 +44,7 @@ public class Health : MonoBehaviour
     {
         if(!dead)
         {
-            regenHealth();
+            // regenHealth();//not used anymore because its weird if the oxygen (health) gets refilled over time
         }
     }
 
@@ -79,7 +79,7 @@ public class Health : MonoBehaviour
         {
             if(currentHealth - amount > 0)
             {
-                if(!source.isPlaying)
+                if(!source.isPlaying)//added by dylan to fix the bug of audio player every frame making it sound like a machine gun
                 {
                     source.clip = clip;
                     source.Play();

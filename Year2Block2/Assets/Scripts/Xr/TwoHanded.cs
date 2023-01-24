@@ -10,13 +10,17 @@ public class TwoHanded : XRGrabInteractable
     [Tooltip("The start rotation for the twohanded object")]
     [SerializeField] Vector3 defaultRot = new Vector3(-90,-90,0);
 
+    [Tooltip("The second grab point of the object using XrSimpleInteractable component")]
     [SerializeField] private List<XRSimpleInteractable> secondGrabPoints = new List<XRSimpleInteractable>();
+
+    [Tooltip("The 3 different types of holding the object/ none : use no rotation of the two points - First : use the rotation of this object for the end rotation - Second use the second grab point rotation for the end rotation")]
     [SerializeField] private enum TwoHandRotationType {none,First,Second};
+
+    [Tooltip("The Selected type of rotation type for this object")]
     [SerializeField] private TwoHandRotationType twoHandRotationType;
 
     [Header("Private data")]
-    private XRBaseInteractor secondInteractor;
-    private Quaternion startRotation;
+    private XRBaseInteractor secondInteractor;//the second controller 
 
 
     /// <summary>
@@ -95,7 +99,7 @@ public class TwoHanded : XRGrabInteractable
         secondInteractor = null;
     }
 
-     /// <summary>
+    /// <summary>
     /// Sets if the axe can be grabbed or not
     /// </summary>
     public override bool IsSelectableBy(XRBaseInteractor interactor)
@@ -113,6 +117,9 @@ public class TwoHanded : XRGrabInteractable
         return secondInteractor && isSelected;
     }
 
+    /// <summary>
+    /// Sets the start rotation of the attachtransform when first grabbed
+    /// </summary>
     public void setStartRot()
     {
         selectingInteractor.attachTransform.localEulerAngles = defaultRot;

@@ -56,8 +56,8 @@ public class RBMovement : MonoBehaviour
 
     [Header("private Data")]
 
-    private bool isGrounded = false;
-    private Vector2 inputAxis;
+    private bool isGrounded = false;//if the player is on the ground 
+    private Vector2 inputAxis;//inputs from the player converted in a vector2
     private float currentSpeed;//current movement speed for if i want to make something that changes the speed
     private Vector3 movementPlayer;//movement velocity
     private bool aButtonDown;//if the jump button is held down
@@ -65,7 +65,7 @@ public class RBMovement : MonoBehaviour
     /// <summary>
     /// Sets the start settings
     /// </summary>
-    public void Start()
+    private void Start()
     {
         currentSpeed = walkingSpeed;
     }
@@ -73,7 +73,7 @@ public class RBMovement : MonoBehaviour
     /// <summary>
     /// gets the input from the controller
     /// </summary>
-    void Update()
+    private void Update()
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
@@ -87,6 +87,9 @@ public class RBMovement : MonoBehaviour
         checkJump();
     }
 
+    /// <summary>
+    /// Checks jump input and if the player is grounded
+    /// </summary>
     private void checkJump()
     {
         isGrounded = Physics.OverlapSphere(transform.position, GroundDistance,groundMask).Length > 0;//cast sphere cast
@@ -115,7 +118,7 @@ public class RBMovement : MonoBehaviour
     /// <summary>
     /// set the velocity of the rigid body with the input from the set controller
     /// </summary>
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         followHeadset();
         
@@ -137,17 +140,26 @@ public class RBMovement : MonoBehaviour
         playerCol.center = new Vector3(centerCollider.x, playerCol.height/2,centerCollider.z);
     }
 
+    /// <summary>
+    /// Boost up the player using addforce
+    /// </summary>
     public void setRunning(bool active)
     {
         currentSpeed = active? runningSpeed : walkingSpeed;
     }
 
+    /// <summary>
+    /// Boost up the player using addforce
+    /// </summary>
     public void BoostUp(float Height)
     {
         rbPlayer.AddForce(transform.up * jumpHeight,ForceMode.Impulse);
         // movementPlayer.y = Mathf.Sqrt(Height * -2);
     }
 
+    /// <summary>
+    /// Draws a sphere for debugging
+    /// </summary>
     // void OnDrawGizmosSelected()
     // {
     //     Gizmos.color = Color.red;

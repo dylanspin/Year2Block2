@@ -1,7 +1,3 @@
-/*
-    @author Dylan spin,
-*/
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

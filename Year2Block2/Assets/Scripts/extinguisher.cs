@@ -13,13 +13,7 @@ public class extinguisher : MonoBehaviour
     [Tooltip("The range of the extinguisher")]
     [SerializeField] private float range = 5.0f;
 
-    [Tooltip("Input source for the buttons")]
-    [SerializeField] private XRNode inputSource;
-
     [Header("Scripts")]
-
-    [Tooltip("The grabbing script to check if its grabbed or nto")]
-    [SerializeField] private ItemHold holdScript;
 
     [Header("Components")]
 
@@ -38,7 +32,7 @@ public class extinguisher : MonoBehaviour
 
     [Header("Private data")]
 
-    private bool activeShooting = false;
+    private bool activeShooting = false;//if the extinguisher is active
 
     /// <summary>
     /// checks if active if so shoot and check if hitting fire 
@@ -58,6 +52,7 @@ public class extinguisher : MonoBehaviour
             }
         }
 
+        //for pc testing
         if(Input.GetMouseButtonDown(0))
         {
             shootExtinguisher(true);
@@ -68,7 +63,7 @@ public class extinguisher : MonoBehaviour
             shootExtinguisher(false);
         }
 
-        drawRay();
+        // drawRay();//for debugging the range of the extinguisher
     }
 
     /// <summary>
@@ -90,7 +85,7 @@ public class extinguisher : MonoBehaviour
 
         if(active)
         {
-            audioEffect.clip = clips[0];
+            audioEffect.clip = clips[0];//sets it to the looping clip
             audioEffect.Play();
             particle.Play();
         }
@@ -98,7 +93,7 @@ public class extinguisher : MonoBehaviour
         {
             particle.Stop();
             audioEffect.Stop();
-            audioEffect.PlayOneShot(clips[1], 0.5f);
+            audioEffect.PlayOneShot(clips[1], 0.5f);//plays the cutting of sound effect
         }
     }
 }

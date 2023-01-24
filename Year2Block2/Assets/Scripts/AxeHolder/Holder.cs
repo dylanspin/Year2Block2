@@ -14,7 +14,7 @@ public class Holder : MonoBehaviour
 
     [Header("Components")]
 
-    [Header("Optional")] [Tooltip("The gameobject that will be shown when in trigger")]
+    [Header("Optional")] [Tooltip("The gameobject that will be shown when in trigger")] //tried different way of code convention for this to see if I like it more
     [SerializeField] private GameObject ghostIndicator;
 
     [Header("Optional")] [Tooltip("The transform position where the item will be held")]
@@ -24,9 +24,7 @@ public class Holder : MonoBehaviour
     [SerializeField] private ItemHold startHold;
 
     [Header("Private data")]
-    private ItemHold currentHolding;
-
-    ///still show a see trough indicator that the axe can be held maybe in a axe shape when in trigger
+    private ItemHold currentHolding;//the current held item 
 
     /// <summary>
     /// Sets the start hold items
@@ -40,6 +38,9 @@ public class Holder : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// if the holder needs to keep updating the position of the held object for example for the holders on the side of the player
+    /// </summary>
     private void Update()
     {
         if(followSetPos)
@@ -55,7 +56,6 @@ public class Holder : MonoBehaviour
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
     /// </summary>
-    /// <param name="other">The other Collider involved in this collision.</param>
     private void OnTriggerEnter(Collider other)
     {
         checkTrigger(other,true);
@@ -64,7 +64,6 @@ public class Holder : MonoBehaviour
     /// <summary>
     /// OnTriggerExit is called when the Collider other has stopped touching the trigger.
     /// </summary>
-    /// <param name="other">The other Collider involved in this collision.</param>
     private void OnTriggerExit(Collider other)
     {
         checkTrigger(other,false);

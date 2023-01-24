@@ -54,7 +54,7 @@ public class HeadGearController : MonoBehaviour
     }
 
    /// <summary>
-   /// Update is called every frame, if the MonoBehaviour is enabled.
+   /// Update checks the inputs and
    /// </summary>
     private void Update()
     {
@@ -94,6 +94,9 @@ public class HeadGearController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Check what profile should be set for the postprocessing 
+    /// </summary>
     private void checkProfile(VolumeProfile newProfile)
     {
         if(postVolume.profile == newProfile)
@@ -107,6 +110,9 @@ public class HeadGearController : MonoBehaviour
         }
     } 
 
+    /// <summary>
+    /// sets the skybox light emition
+    /// </summary>
     private void setSkyBox(float newLighting)
     {
         if(RenderSettings.ambientIntensity == newLighting)

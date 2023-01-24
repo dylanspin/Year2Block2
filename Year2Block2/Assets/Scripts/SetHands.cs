@@ -7,23 +7,26 @@ public class SetHands : MonoBehaviour
 {   
     [Header("Hand settings")]
 
-    [Tooltip("The id of the hand")]
+    [Tooltip("The id of the hand where this script is on")]
     [SerializeField] private int handId = 0;
 
     [Header("Private Static data")]
 
-    private static Quaternion[] startRot = new Quaternion[2];
-    private static XRBaseInteractor[] HandsScripts = new XRBaseInteractor[2];
+    private static Quaternion[] startRot = new Quaternion[2];//the start rotation of the two hands attachTransform
+    private static XRBaseInteractor[] HandsScripts = new XRBaseInteractor[2];//the two interactor scripts of the hands
 
+
+    /// <summary>
+    /// Sets the start data 
+    /// </summary>
     private void Start()
     {
         HandsScripts[handId] = GetComponent<XRBaseInteractor>();
         startRot[handId] = HandsScripts[handId].attachTransform.localRotation;
     }
 
-
     /// <summary>
-    /// Resets the attach transform when not holding anything
+    /// Resets the attach transform when not holding anything cald from the item hold script
     /// </summary>
     public static void resetHand()
     {

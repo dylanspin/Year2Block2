@@ -17,18 +17,29 @@ public class ItemHold : MonoBehaviour
     [Tooltip("The script for controlling a twohanded item")]
     [SerializeField] TwoHanded twoScript;
  
+    [Header("Testing")]
+
+    [Tooltip("THe meshrenderer for visual testing of grabbing the object")]
+    [SerializeField] private MeshRenderer testMesh;
+
+    [Tooltip("Materials for visual testing of grabbing the object")]
+    [SerializeField] private Material[] testMat;
+
     [Header("Components")]
 
-    [SerializeField] private MeshRenderer testMesh;
-    [SerializeField] private Material[] testMat;
+    [Tooltip("This object main rigidbody")]
     [SerializeField] private Rigidbody objectRb;
+
+    [Tooltip("The animator for controlling the grab collider")]
     [SerializeField] private Animator grabPointAnim;
+
+    [Tooltip("The gameobject of the second grab point")]
     [SerializeField] private GameObject secondGrabPoint;
 
     [Header("Private data")]
-    private List<Holder> inTriggerList = new List<Holder>();
-    private Holder holderScript = null;
-    private bool grabbed = false;
+    private List<Holder> inTriggerList = new List<Holder>();//all the holder scripts of where this object is in their trigger
+    private Holder holderScript = null;//the script of the holder if this item is being held by a holder
+    private bool grabbed = false;//if this object is currently grabbed or not
 
     /// <summary>
     /// Sets if the object should be held as starting holding object

@@ -31,13 +31,20 @@ public class Look : MonoBehaviour
     private float xRotation = 0.0f;//the current x angle Rotation
     private float yRotation = 0.0f;//the current Y angle Rotation
     
+    /// <summary>
+    /// Sets the start settings
+    /// </summary>
+
     private void Start()
     {
         Vector3 currentPos = transform.localPosition;
         transform.localPosition = new Vector3(currentPos.x,setHeadHeight,currentPos.z);
     }
 
-    void Update ()
+    /// <summary>
+    /// Uses the mouse input to rotate the camera around
+    /// </summary>
+    private void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;//the X angle mouse input
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;//the Y angle mouse input
@@ -49,6 +56,9 @@ public class Look : MonoBehaviour
         playerBody.Rotate(Vector3.up * mouseX);//rotates the horizontal player object
     }
 
+    /// <summary>
+    /// Sets the start height for on pc so the camera isnt on the ground
+    /// </summary>
     public float getSetHeight()
     {
         return setHeadHeight;

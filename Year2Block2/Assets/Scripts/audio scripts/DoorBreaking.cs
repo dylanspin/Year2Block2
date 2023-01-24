@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DoorBreaking : MonoBehaviour
 {
+    //made by sergiu 
+
     [Header("Components")]
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;

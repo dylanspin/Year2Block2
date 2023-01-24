@@ -15,9 +15,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private FireController fireScript;
 
     [Header("Private data")]
-    private PlayerController controllerScript;
-    private endEffect endController;
+    private PlayerController controllerScript;//the player controller script which is the centeralized script of the player object
+    private endEffect endController;//the script that controlls the end screen and the transition between scenes
 
+    /// <summary>
+    /// Sets the start data using the player controller and sets the data on the player controller
+    /// </summary>
     public void setStart(PlayerController newController,endEffect newEnd)
     {
         controllerScript = newController;
@@ -27,14 +30,20 @@ public class GameController : MonoBehaviour
         setPlayerScripts();
     }
 
+    /// <summary>
+    /// Sets all the scripts of the player controller 
+    /// </summary>
     private void setPlayerScripts()
     {
         controllerScript.setScripts(effectController);
     }
 
-    public void setEnd(bool active)
+    /// <summary>
+    /// If the game is ended use
+    /// </summary>
+    public void setEnd(bool won)
     {
         effectController.setVision(0);
-        endController.setState(active);
+        endController.setState(won);
     }
 }

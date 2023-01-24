@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    /*
+        Old pc movement script before the VR was implemented
+    */
+
     [Header("Settings")]
 
     [SerializeField] [Tooltip ("The walking speed of the player")]

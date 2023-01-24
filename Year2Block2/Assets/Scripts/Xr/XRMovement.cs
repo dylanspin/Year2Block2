@@ -35,9 +35,9 @@ public class XRMovement : MonoBehaviour
 
     [Header("Private values")]
 
-    private Vector2 inputAxis;
-    private float currentSpeed;
-    private Vector3 velocity;
+    private Vector2 inputAxis;//the players inputs converted to a vector 2
+    private float currentSpeed;//the current set speed of the player
+    private Vector3 velocity;//the set velocity of the player used for moving around
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before

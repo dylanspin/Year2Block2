@@ -1,7 +1,3 @@
-/*
-    @author Dylan spin,
-*/
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,14 +18,13 @@ public class HandGrab : MonoBehaviour
     [SerializeField] private Transform grabPoint;
 
     [Header("Private data")]
-    [SerializeField] private List<Transform> inTriggerObjects = new List<Transform>();//all the transforms that are currently in the list
-    [SerializeField] private Transform grabbedObject;//the current grabbed object
-    private Vector3 oldPos;
+    private List<Transform> inTriggerObjects = new List<Transform>();//all the transforms that are currently in the list
+    private Transform grabbedObject;//the current grabbed object
+    private Vector3 oldPos;//was going to be used to add force to the object when let go but still needed some extra add ons
 
     /// <summary>
-    /// OnTriggerEnter is called when the Collider other enters the trigger.
+    /// if a grabbable object enters the trigger zone of the hand
     /// </summary>
-    /// <param name="other">The other Collider involved in this collision.</param>
     private void OnTriggerEnter(Collider other)
     {
         Transform enteredTransform = other.transform.root;
@@ -47,9 +42,8 @@ public class HandGrab : MonoBehaviour
     }
  
     /// <summary>
-    /// OnTriggerExit is called when the Collider other exits the trigger.
+    /// if a grabbable object leaves the trigger zone of the hand
     /// </summary>
-    /// <param name="other">The other Collider involved in this exit.</param>
     private void OnTriggerExit(Collider other)
     {
         Transform exitTransform = other.transform.root;
@@ -63,12 +57,13 @@ public class HandGrab : MonoBehaviour
     }
 
     /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// Runs all the inputs either from pc or from the controller
     /// </summary>
     private void Update()
     {
         testingInputs();
 
+        //uses Occulus input
         if(OVRInput.GetDown(grabInput))
         {
             grab(true);
@@ -80,9 +75,11 @@ public class HandGrab : MonoBehaviour
         }
     }   
 
+    /// <summary>
+    /// Used for testing the grabbing on pc in the editor
+    /// </summary>
     private void testingInputs()
     {
-        // letgoForce();
 
         if(Input.GetMouseButtonDown(mouseInput))
         {
@@ -117,22 +114,24 @@ public class HandGrab : MonoBehaviour
         {
             if(grabbedObject)
             {
+                letgoForce();
                 grabbedObject.GetComponent<GrabbableCustom>().grabThis(false,grabPoint);
                 grabbedObject = null;
             }
         }
     }
 
+    /// <summary>
+    /// Adds force to the object when let go
+    /// </summary>
     private void letgoForce()
     {
         Vector3 velocityCal = transform.position - oldPos;
         oldPos = transform.position;
-
-        Debug.Log(velocityCal);
     }
 
     /// <summary>
-    /// Function returns the most close transform in the list
+    /// Function returns the closesed transform in the list
     /// </summary>
     private Transform getClosed()
     {

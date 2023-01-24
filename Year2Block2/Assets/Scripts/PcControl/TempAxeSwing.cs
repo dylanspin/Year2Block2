@@ -17,12 +17,18 @@ public class TempAxeSwing : MonoBehaviour
     [Tooltip("Animator for extending Axe forward")]
     [SerializeField] private Animator anim;
 
-    void Start()
+    /// <summary>
+    /// turns this off if its not in the editor so on the quest its turned off
+    /// </summary>
+    private void Start()
     {   
         this.enabled = Application.isEditor;
     }
     
-    void Update()
+    /// <summary>
+    /// Calls the pcAxePush function 
+    /// </summary>
+    private void Update()
     {
         pcAxePush();
     }
@@ -32,17 +38,17 @@ public class TempAxeSwing : MonoBehaviour
     /// </summary>
     private void pcAxePush()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))//push the axe forward so it can be used for testing
         {
             anim.SetBool("Push",true);
         }
 
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0))//returns the axe to the normal position when the mouse button is let go
         {
             anim.SetBool("Push",false);
         }
         
-        if(Input.GetMouseButton(1))
+        if(Input.GetMouseButton(1))//rotate the axe for better testing
         {
             rotatePoint.Rotate(rotateSpeed * Time.deltaTime, 0, 0);
         }

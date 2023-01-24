@@ -20,7 +20,7 @@ public class endEffect : MonoBehaviour
     [SerializeField] private string[] endText = {"Passed","Lost"};
 
     [Header("Private data")]
-    private int loadNextScene = -1;
+    private int loadNextScene = -1;//the scene that would be loaded when the animation event is called
 
     /// <summary>
     /// Called when the game is either lost or won then it shows the transition
